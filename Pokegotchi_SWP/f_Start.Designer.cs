@@ -1,6 +1,6 @@
 ﻿namespace Pokegotchi_SWP
 {
-    partial class Form1
+    partial class f_Start
     {
         /// <summary>
         ///  Required designer variable.

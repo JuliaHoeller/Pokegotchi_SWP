@@ -1,8 +1,8 @@
 namespace Pokegotchi_SWP
 {
-    public partial class Form1 : Form
+    public partial class f_Start : Form
     {
-        public Form1()
+        public f_Start()
         {
             InitializeComponent();
         }
