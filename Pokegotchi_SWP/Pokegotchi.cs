@@ -41,7 +41,16 @@ namespace Pokegotchi_SWP
         public int Friendship
         {
             get { return _Friendship}
-            set { _Friendship = value; }
+            set { 
+                if(_Friendship + value > 1000)
+                {
+                    _Friendship = 1000;
+                }
+                else
+                {
+                    _Friendship = _Friendship + value;
+                }
+                }
         }
         public int HPbase
         {
@@ -129,53 +138,118 @@ namespace Pokegotchi_SWP
             this.INIT = CalculateStats(INITbase, level);
         }
 
-        public int CalculateStats(int basestat, int level)
+        private int CalculateStats(int basestat, int level)
         {
             double stat;
-            if (i < 10)
+
+            if (level < 10)
             {
-                stat = Math.Round((basestat * (1 + (level / 30) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.1), 2);
+                stat = Math.Round((basestat * (1.5 + (level / 20) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 20)
+            else if (level < 20)
             {
-                stat = Math.Round((basestat * (1 + (level / 32) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.2), 2);
+                stat = Math.Round((basestat * (1.49 + (level / 20) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 30)
+            else if (level < 30)
             {
-                stat = Math.Round((basestat * (1 + (level / 34) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.3), 2);
+                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 40)
+            else if (level < 40)
             {
-                stat = Math.Round((basestat * (1 + (level / 36) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.4), 2);
+                stat = Math.Round((basestat * (1.47 + (level / 21) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 50)
+            else if (level < 50)
             {
-                stat = Math.Round((basestat * (1 + (level / 38) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.5), 2);
+                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 60)
+            else if (level < 60)
             {
-                stat = Math.Round((basestat * (1 + (level / 40) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.6), 2);
+                stat = Math.Round((basestat * (1.45 + (level / 22) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 70)
+            else if (level < 70)
             {
-                stat = Math.Round((basestat * (1 + (level / 42) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.7), 2);
+                stat = Math.Round((basestat * (1.44 + (level / 23) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 80)
+            else if (level < 80)
             {
-                stat = Math.Round((basestat * (1 + (level / 44) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.8), 2);
+                stat = Math.Round((basestat * (1.43 + (level / 23) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
-            else if (i < 90)
+            else if (level < 90)
             {
-                stat = Math.Round((basestat * (1 + (level / 46) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 2.9), 2);
+                stat = Math.Round((basestat * (1.42 + (level / 24) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
             else
             {
-                stat = Math.Round((basestat * (1 + (level / 48) * (level / 15)) * (1 + friendship / 3000) * 0.12 + level * 3), 2);
+                stat = Math.Round((basestat * (1.41 + (level / 24) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
             }
 
             int statrounded;
-            statrounded = stat;
+            statrounded = Convert.ToInt32(stat);
             return statrounded;
+        }
+        private int CalculateHP(int basestat, int level)
+        {
+            double stat;
+
+            if (level < 10)
+            {
+                stat = Math.Round((basestat * (1.55 + (level / 18) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 20)
+            {
+                stat = Math.Round((basestat * (1.54 + (level / 18) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 30)
+            {
+                stat = Math.Round((basestat * (1.53 + (level / 19) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 40)
+            {
+                stat = Math.Round((basestat * (1.52 + (level / 19) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 50)
+            {
+                stat = Math.Round((basestat * (1.51 + (level / 20) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 60)
+            {
+                stat = Math.Round((basestat * (1.50 + (level / 20) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 70)
+            {
+                stat = Math.Round((basestat * (1.49 + (level / 21) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 80)
+            {
+                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else if (level < 90)
+            {
+                stat = Math.Round((basestat * (1.47 + (level / 22) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+            else
+            {
+                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+            }
+
+            int statrounded;
+            statrounded = Convert.ToInt32(stat);
+            return statrounded;
+        }
+        private int LevelUP()
+        {
+            if(EXPhave < EXPneeded)
+            {
+                return;
+            }
+
+            do
+            {
+                EXPhave = EXPhave - EXPneeded;
+                level++;
+                ATK = CalculateStats(ATKbase, level);
+
+            } while (EXPhave > EXPneeded);
         }
 
     }
