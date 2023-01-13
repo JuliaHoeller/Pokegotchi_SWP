@@ -113,9 +113,9 @@
             this.lblJuliaStuff.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblJuliaStuff.Location = new System.Drawing.Point(227, 139);
             this.lblJuliaStuff.Name = "lblJuliaStuff";
-            this.lblJuliaStuff.Size = new System.Drawing.Size(121, 63);
+            this.lblJuliaStuff.Size = new System.Drawing.Size(175, 84);
             this.lblJuliaStuff.TabIndex = 2;
-            this.lblJuliaStuff.Text = "Grafik-Designer, \r\nProgrammierer, \r\nBeraterin";
+            this.lblJuliaStuff.Text = "Grafik-Designer, \r\nProgrammierer, \r\nBeraterin,\r\nPflichtenheftbeauftragte";
             // 
             // lblJaquelineStuff
             // 
