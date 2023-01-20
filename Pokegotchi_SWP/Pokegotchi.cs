@@ -8,7 +8,7 @@ namespace Pokegotchi_SWP
 {
     internal class Pokegotchi
     {
-        private string _race, _name;
+        private string _race, _name, _typ1, _typ2;
         private int _level, _EXPhave, _EXPneeded, _Friendship, _HPbase, _ATKbase, _DEFbase, _SATKbase, _SDEFbase, _INITbase, _HP, _ATK, _DEF, _SATK, _SDEF, _INIT;
 
         #region Getter & Setter
@@ -22,6 +22,16 @@ namespace Pokegotchi_SWP
         {
             get { return _name; }
             set { _name = value; }
+        }
+        public string typ1
+        {
+            get { return _typ1; }
+            set { _typ1 = value; }
+        }
+        public string typ2
+        {
+            get { return _typ2; }
+            set { _typ2 = value; }
         }
         public int level
         {
@@ -115,13 +125,15 @@ namespace Pokegotchi_SWP
 
         #endregion
 
-        public Pokegotchi(string race, string name, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
+        public Pokegotchi(string race, string name, string typ1, string typ2, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
         {
             this.race = race;
             this.name = name;
             this.level = level;
             this.friendship = Friendship;
             this.EXPhave = EXPhave;
+            this.typ1 = typ1;
+            this.typ2 = typ2;
 
             this.HPbase = HPbase;
             this.ATKbase = ATKbase;
@@ -251,6 +263,13 @@ namespace Pokegotchi_SWP
 
             } while (EXPhave > EXPneeded);
         }
+        public static int TypeAdvantege(string Attacktype, string Defensetype)
+        {
+            int multiplyier = 1;
 
+
+
+            return multiplyier;
+        }
     }
 }
