@@ -38,9 +38,9 @@ namespace Pokegotchi_SWP
             get { return _EXPneeded; }
             set { _EXPneeded = value; }
         } 
-        public int Friendship
+        public int friendship
         {
-            get { return _Friendship}
+            get { return _Friendship; }
             set { 
                 if(_Friendship + value > 1000)
                 {
@@ -59,7 +59,7 @@ namespace Pokegotchi_SWP
         }
         public int ATKbase
         {
-            get { return _ATKbase}
+            get { return _ATKbase; }
             set { _ATKbase = value; }
         }
         public int DEFbase
@@ -120,7 +120,7 @@ namespace Pokegotchi_SWP
             this.race = race;
             this.name = name;
             this.level = level;
-            this.Friendship = Friendship;
+            this.friendship = Friendship;
             this.EXPhave = EXPhave;
 
             this.HPbase = HPbase;
@@ -236,7 +236,7 @@ namespace Pokegotchi_SWP
             statrounded = Convert.ToInt32(stat);
             return statrounded;
         }
-        private int LevelUP()
+        private void LevelUP()
         {
             if(EXPhave < EXPneeded)
             {
