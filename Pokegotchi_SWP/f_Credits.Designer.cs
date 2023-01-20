@@ -36,6 +36,7 @@
             this.lblRaphaelStuff = new System.Windows.Forms.Label();
             this.lblJuliaStuff = new System.Windows.Forms.Label();
             this.lblJaquelineStuff = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             this.pnlCredits.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,6 @@
             this.pnlCredits.Name = "pnlCredits";
             this.pnlCredits.Size = new System.Drawing.Size(221, 484);
             this.pnlCredits.TabIndex = 0;
-            this.pnlCredits.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCredits_Paint);
             // 
             // lblJaqueline
             // 
@@ -127,12 +127,24 @@
             this.lblJaquelineStuff.TabIndex = 3;
             this.lblJaquelineStuff.Text = "Grafik-Designer, \r\nProgramm-Designer,\r\nProgrammierer";
             // 
+            // btn_back
+            // 
+            this.btn_back.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_back.Location = new System.Drawing.Point(410, 24);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(98, 33);
+            this.btn_back.TabIndex = 4;
+            this.btn_back.Text = "zurück";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // f_Credits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(520, 484);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.lblJaquelineStuff);
             this.Controls.Add(this.lblJuliaStuff);
             this.Controls.Add(this.lblRaphaelStuff);
@@ -140,6 +152,7 @@
             this.Font = new System.Drawing.Font("Franklin Gothic Book", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "f_Credits";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credits";
             this.pnlCredits.ResumeLayout(false);
             this.pnlCredits.PerformLayout();
@@ -158,5 +171,6 @@
         private Label lblRaphaelStuff;
         private Label lblJuliaStuff;
         private Label lblJaquelineStuff;
+        private Button btn_back;
     }
 }

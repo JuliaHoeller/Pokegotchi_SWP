@@ -12,9 +12,18 @@ namespace Pokegotchi_SWP
 {
     public partial class f_Care : Form
     {
+        public bool exit = false; 
+
         public f_Care()
         {
             InitializeComponent();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            exit = true;
+            this.Hide();
+            this.Dispose();
         }
     }
 }

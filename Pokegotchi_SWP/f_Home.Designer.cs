@@ -33,13 +33,14 @@
             this.btnBreed = new System.Windows.Forms.Button();
             this.btnCare = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFavPokegotchi)).BeginInit();
             this.SuspendLayout();
             // 
             // pbFavPokegotchi
             // 
             this.pbFavPokegotchi.Image = global::Pokegotchi_SWP.Properties.Resources.venti;
-            this.pbFavPokegotchi.Location = new System.Drawing.Point(448, 302);
+            this.pbFavPokegotchi.Location = new System.Drawing.Point(436, 283);
             this.pbFavPokegotchi.Name = "pbFavPokegotchi";
             this.pbFavPokegotchi.Size = new System.Drawing.Size(292, 293);
             this.pbFavPokegotchi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -56,6 +57,7 @@
             this.btnFight.TabIndex = 1;
             this.btnFight.Text = "Kampf";
             this.btnFight.UseVisualStyleBackColor = false;
+            this.btnFight.Click += new System.EventHandler(this.btnFight_Click);
             // 
             // btnBreed
             // 
@@ -76,6 +78,7 @@
             this.btnCare.TabIndex = 3;
             this.btnCare.Text = "Kümmern";
             this.btnCare.UseVisualStyleBackColor = true;
+            this.btnCare.Click += new System.EventHandler(this.btnCare_Click);
             // 
             // btnShop
             // 
@@ -87,6 +90,17 @@
             this.btnShop.Text = "Shop";
             this.btnShop.UseVisualStyleBackColor = true;
             // 
+            // btn_back
+            // 
+            this.btn_back.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_back.Location = new System.Drawing.Point(115, 582);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(117, 37);
+            this.btn_back.TabIndex = 5;
+            this.btn_back.Text = "zurück";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // f_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -95,6 +109,7 @@
             this.BackgroundImage = global::Pokegotchi_SWP.Properties.Resources.Livingroom;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1173, 631);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.btnCare);
             this.Controls.Add(this.btnBreed);
@@ -103,6 +118,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "f_Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appartment";
             ((System.ComponentModel.ISupportInitialize)(this.pbFavPokegotchi)).EndInit();
             this.ResumeLayout(false);
@@ -116,5 +132,6 @@
         private Button btnBreed;
         private Button btnCare;
         private Button btnShop;
+        private Button btn_back;
     }
 }
