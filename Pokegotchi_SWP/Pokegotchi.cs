@@ -49,7 +49,7 @@ namespace Pokegotchi_SWP
             get { return _EXPneeded; }
             set { _EXPneeded = value; }
         } 
-        public int Friendship
+        public int friendship
         {
             get { return _Friendship; }
             set { 
@@ -133,8 +133,10 @@ namespace Pokegotchi_SWP
             this.typ1 = typ1;
             this.typ2 = typ2;
             this.level = level;
-            this.Friendship = Friendship;
+            this.friendship = Friendship;
             this.EXPhave = EXPhave;
+            this.typ1 = typ1;
+            this.typ2 = typ2;
 
             this.HPbase = HPbase;
             this.ATKbase = ATKbase;
@@ -264,34 +266,13 @@ namespace Pokegotchi_SWP
 
             } while (EXPhave > EXPneeded);
         }
-
-        private double TypeAdvantages(string DefenseType, string AttackType)
+        public static int TypeAdvantege(string Attacktype, string Defensetype)
         {
-            double Multipliyer = 1;
+            int multiplyier = 1;
 
-            switch (DefenseType)
-            {
-                case "fire":
-                    
-                    break;
-                case "water":
 
-                    break;
-                case "wind":
 
-                    break;
-                case "ground":
-
-                    break;
-                case "ghost":
-
-                    break;
-                case "grass":
-
-                    break;
-            }
-            return Multipliyer;
+            return multiplyier;
         }
-
     }
 }
