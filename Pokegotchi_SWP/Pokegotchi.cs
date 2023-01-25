@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Pokegotchi_SWP
 {
     internal class Pokegotchi
     {
-        private string _race, _name;
+        private string _race, _name, _typ1, _typ2;
         private int _level, _EXPhave, _EXPneeded, _Friendship, _HPbase, _ATKbase, _DEFbase, _SATKbase, _SDEFbase, _INITbase, _HP, _ATK, _DEF, _SATK, _SDEF, _INIT;
 
         #region Getter & Setter
@@ -22,6 +23,16 @@ namespace Pokegotchi_SWP
         {
             get { return _name; }
             set { _name = value; }
+        }
+        public string typ1
+        {
+            get { return _typ1; }
+            set { _typ1 = value; }
+        }
+        public string typ2
+        {
+            get { return _typ2; }
+            set { _typ2 = value; }
         }
         public int level
         {
@@ -40,7 +51,7 @@ namespace Pokegotchi_SWP
         } 
         public int Friendship
         {
-            get { return _Friendship}
+            get { return _Friendship; }
             set { 
                 if(_Friendship + value > 1000)
                 {
@@ -59,7 +70,7 @@ namespace Pokegotchi_SWP
         }
         public int ATKbase
         {
-            get { return _ATKbase}
+            get { return _ATKbase; }
             set { _ATKbase = value; }
         }
         public int DEFbase
@@ -112,13 +123,15 @@ namespace Pokegotchi_SWP
             get { return _INIT; }
             set { _INIT = value; }
         }
-
+        
         #endregion
 
-        public Pokegotchi(string race, string name, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
+        public Pokegotchi(string race, string name, string typ1, string typ2, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
         {
             this.race = race;
             this.name = name;
+            this.typ1 = typ1;
+            this.typ2 = typ2;
             this.level = level;
             this.Friendship = Friendship;
             this.EXPhave = EXPhave;
@@ -144,43 +157,43 @@ namespace Pokegotchi_SWP
 
             if (level < 10)
             {
-                stat = Math.Round((basestat * (1.5 + (level / 20) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.5 + (level / 20) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 20)
             {
-                stat = Math.Round((basestat * (1.49 + (level / 20) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.49 + (level / 20) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 30)
             {
-                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 40)
             {
-                stat = Math.Round((basestat * (1.47 + (level / 21) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.47 + (level / 21) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 50)
             {
-                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 60)
             {
-                stat = Math.Round((basestat * (1.45 + (level / 22) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.45 + (level / 22) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 70)
             {
-                stat = Math.Round((basestat * (1.44 + (level / 23) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.44 + (level / 23) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 80)
             {
-                stat = Math.Round((basestat * (1.43 + (level / 23) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.43 + (level / 23) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else if (level < 90)
             {
-                stat = Math.Round((basestat * (1.42 + (level / 24) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.42 + (level / 24) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
             else
             {
-                stat = Math.Round((basestat * (1.41 + (level / 24) * (level / 15)) * (1 + friendship / 3000) * 0.08 + level * 2), 2);
+                stat = Math.Round((basestat * (1.41 + (level / 24) * (level / 15)) * (1 + Friendship / 3000) * 0.08 + level * 2), 2);
             }
 
             int statrounded;
@@ -193,50 +206,50 @@ namespace Pokegotchi_SWP
 
             if (level < 10)
             {
-                stat = Math.Round((basestat * (1.55 + (level / 18) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.55 + (level / 18) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 20)
             {
-                stat = Math.Round((basestat * (1.54 + (level / 18) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.54 + (level / 18) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 30)
             {
-                stat = Math.Round((basestat * (1.53 + (level / 19) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.53 + (level / 19) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 40)
             {
-                stat = Math.Round((basestat * (1.52 + (level / 19) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.52 + (level / 19) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 50)
             {
-                stat = Math.Round((basestat * (1.51 + (level / 20) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.51 + (level / 20) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 60)
             {
-                stat = Math.Round((basestat * (1.50 + (level / 20) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.50 + (level / 20) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 70)
             {
-                stat = Math.Round((basestat * (1.49 + (level / 21) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.49 + (level / 21) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 80)
             {
-                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.48 + (level / 21) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else if (level < 90)
             {
-                stat = Math.Round((basestat * (1.47 + (level / 22) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.47 + (level / 22) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
             else
             {
-                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + friendship / 2500) * 0.1 + level * 2), 2);
+                stat = Math.Round((basestat * (1.46 + (level / 22) * (level / 15)) * (1 + Friendship / 2500) * 0.1 + level * 2), 2);
             }
 
             int statrounded;
             statrounded = Convert.ToInt32(stat);
             return statrounded;
         }
-        private int LevelUP()
+        private void LevelUP()
         {
             if(EXPhave < EXPneeded)
             {
@@ -250,6 +263,34 @@ namespace Pokegotchi_SWP
                 ATK = CalculateStats(ATKbase, level);
 
             } while (EXPhave > EXPneeded);
+        }
+
+        private double TypeAdvantages(string DefenseType, string AttackType)
+        {
+            double Multipliyer = 1;
+
+            switch (DefenseType)
+            {
+                case "fire":
+                    
+                    break;
+                case "water":
+
+                    break;
+                case "wind":
+
+                    break;
+                case "ground":
+
+                    break;
+                case "ghost":
+
+                    break;
+                case "grass":
+
+                    break;
+            }
+            return Multipliyer;
         }
 
     }
