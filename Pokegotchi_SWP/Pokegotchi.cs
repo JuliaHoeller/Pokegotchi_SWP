@@ -8,6 +8,8 @@ namespace Pokegotchi_SWP
 {
     internal class Pokegotchi
     {
+        //define all needed Variables
+        //Some of them can be missing or not used, it depends on future devolpment
         private string _race, _name, _typ1, _typ2;
         private int _level, _EXPhave, _EXPneeded, _Friendship, _HPbase, _ATKbase, _DEFbase, _SATKbase, _SDEFbase, _INITbase, _HP, _ATK, _DEF, _SATK, _SDEF, _INIT;
 
@@ -125,6 +127,8 @@ namespace Pokegotchi_SWP
 
         #endregion
 
+        //Create a new Pokegotchi
+        //All this stats are needed, because no Pokegotchi can exists without an HP Value or a ATK Value
         public Pokegotchi(string race, string name, string typ1, string typ2, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
         {
             this.race = race;
@@ -142,7 +146,7 @@ namespace Pokegotchi_SWP
             this.SDEFbase = SDEFbase;
             this.INITbase = INITbase;
 
-            
+            this.HP = CalculateHP(HPbase, level);
             this.ATK = CalculateStats(ATKbase, level);
             this.DEF = CalculateStats(DEFbase, level);
             this.SATK = CalculateStats(SATKbase, level);
@@ -150,6 +154,8 @@ namespace Pokegotchi_SWP
             this.INIT = CalculateStats(INITbase, level);
         }
 
+        //The Method in which the Stats are calculated out of the baseStats
+        //Diffrence between HP and the other stats: HP-Stat will be higher so its a other method
         private int CalculateStats(int basestat, int level)
         {
             double stat;
@@ -248,9 +254,12 @@ namespace Pokegotchi_SWP
             statrounded = Convert.ToInt32(stat);
             return statrounded;
         }
+
+        //Following Methods are Work in Progress, something like LevelUp will need the EXP System which will be done later
+        #region Work in Progress
         private void LevelUP()
         {
-            if(EXPhave < EXPneeded)
+            if (EXPhave < EXPneeded)
             {
                 return;
             }
@@ -270,6 +279,7 @@ namespace Pokegotchi_SWP
 
 
             return multiplyier;
-        }
+        } 
+        #endregion
     }
 }
