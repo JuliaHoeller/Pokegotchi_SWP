@@ -51,7 +51,7 @@ namespace Pokegotchi_SWP
             get { return _EXPneeded; }
             set { _EXPneeded = value; }
         } 
-        public int friendship
+        public int Friendship
         {
             get { return _Friendship; }
             set { 
@@ -137,7 +137,7 @@ namespace Pokegotchi_SWP
             this.typ1 = typ1;
             this.typ2 = typ2;
             this.level = level;
-            this.friendship = Friendship;
+            this.Friendship = Friendship;
             this.EXPhave = EXPhave;
             this.typ1 = typ1;
             this.typ2 = typ2;
