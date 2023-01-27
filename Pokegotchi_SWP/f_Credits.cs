@@ -12,14 +12,18 @@ namespace Pokegotchi_SWP
 {
     public partial class f_Credits : Form
     {
+        public bool exit = false;
+
         public f_Credits()
         {
             InitializeComponent();
         }
 
-        private void pnlCredits_Paint(object sender, PaintEventArgs e)
+        private void btn_back_Click(object sender, EventArgs e)
         {
-
+            exit = true;
+            this.Close();
+            this.Dispose();
         }
     }
 }

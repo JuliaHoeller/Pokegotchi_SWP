@@ -71,6 +71,7 @@
             this.btnLoadGame.TabIndex = 2;
             this.btnLoadGame.Text = "Spiel laden";
             this.btnLoadGame.UseVisualStyleBackColor = false;
+            this.btnLoadGame.Click += new System.EventHandler(this.btnLoadGame_Click);
             // 
             // btnCredits
             // 
@@ -100,6 +101,7 @@
             this.btnNewGame.TabIndex = 4;
             this.btnNewGame.Text = "Neues Spiel";
             this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // f_Start
             // 
@@ -113,6 +115,7 @@
             this.Controls.Add(this.pbl_Start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "f_Start";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start";
             this.pbl_Start.ResumeLayout(false);
             this.pbl_Start.PerformLayout();
