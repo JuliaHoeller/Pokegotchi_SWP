@@ -16,5 +16,35 @@ namespace Pokegotchi_SWP
         {
             InitializeComponent();
         }
+
+        private void pbPokegotchiEgg1_Click(object sender, EventArgs e)
+        {
+            f_Home home = new f_Home();
+            this.Hide();
+            home.ShowDialog();
+
+            f_Start start = new f_Start();
+            start.ShowDialog();
+        }
+
+        private void pbPokegotchiEgg2_Click(object sender, EventArgs e)
+        {
+            f_Home home = new f_Home();
+            this.Hide();
+            home.ShowDialog();
+
+            f_Start start = new f_Start();
+            start.ShowDialog();
+        }
+
+        private void pbPokegotchiEgg3_Click(object sender, EventArgs e)
+        {
+            f_Home home = new f_Home();
+            this.Hide();
+            home.ShowDialog();
+
+            f_Start start = new f_Start();
+            start.ShowDialog();
+        }
     }
 }
