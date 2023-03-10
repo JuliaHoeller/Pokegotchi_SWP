@@ -275,10 +275,49 @@ namespace Pokegotchi_SWP
 
             } while (EXPhave > EXPneeded);
         }
-        public static int TypeAdvantege(string Attacktype, string Defensetype)
+        public static double TypeAdvantege(string Attacktype, string Defensetype)
         {
-            int multiplyier = 1;
+            double multiplyier = 1;
+            List<string> StrongTypes = new List<string>();
+            List<string> WeakTypes = new List<string>();
+            List<string> ImmunTypes = new List<string>();
+            List<string> Neutraltypes = new List<string>();
 
+            switch (Attacktype)
+            {
+                case "water":
+                    Neutraltypes.AddRange(new List<string>() { "water", "wind", "ghost", "time"});
+                    WeakTypes.AddRange(new List<string>() { "fire", "ground", "magma", "rock", "obi", "smoke", "crystal" });
+                    StrongTypes.AddRange(new List<string>() { "grass", "ice", "steam", "poison", "bug", "fairy", "psycho", "electric", "sound" });
+
+                    if (Neutraltypes.Contains(Defensetype))
+                        multiplyier = 1;
+                    else if (WeakTypes.Contains(Defensetype))
+                        multiplyier = 2;
+                    else if (StrongTypes.Contains(Defensetype))
+                        multiplyier = 0.5;
+                    else if (ImmunTypes.Contains(Defensetype))
+                        multiplyier = 0;
+                    else
+                        multiplyier = 0;
+                   break;
+                case "fire":
+                    Neutraltypes.AddRange(new List<string>() { "fire", "ground", "steam", "smoke", "fairy", "electric", "time" });
+                    WeakTypes.AddRange(new List<string>() { "wind", "grass", "ice", "bug", "psycho", "sound"});
+                    StrongTypes.AddRange(new List<string>() { "water", "magma", "rock", "obi", "poison", "crystal"});
+
+                    if (Neutraltypes.Contains(Defensetype))
+                        multiplyier = 1;
+                    else if (WeakTypes.Contains(Defensetype))
+                        multiplyier = 2;
+                    else if (StrongTypes.Contains(Defensetype))
+                        multiplyier = 0.5;
+                    else if (ImmunTypes.Contains(Defensetype))
+                        multiplyier = 0;
+                    else
+                        multiplyier = 0;
+                    break;
+            }
 
 
             return multiplyier;
