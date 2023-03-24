@@ -13,13 +13,13 @@ namespace Pokegotchi_SWP
 
             this.Hide();
             credits.ShowDialog();
-            
-            if(credits.exit == true)
+
+            if (credits.exit == true)
             {
                 this.Show();
             }
 
-            else if(credits.exit == false)
+            else if (credits.exit == false)
             {
                 Environment.Exit(2);
             }
@@ -31,7 +31,7 @@ namespace Pokegotchi_SWP
             this.Hide();
             newPokegotchi.ShowDialog();
 
-            Environment.Exit(5);         
+            Environment.Exit(5);
         }
 
         private void btnLoadGame_Click(object sender, EventArgs e)
@@ -50,6 +50,13 @@ namespace Pokegotchi_SWP
                 Environment.Exit(1);
             }
 
+        }
+
+        private void f_Start_Load(object sender, EventArgs e)
+        {
+            Attacks.AllAttacks.Add(new Attacks("Wasserstoﬂ", "water", 50, 100, "none", 0, "p"));
+            Attacks.AllAttacks.Add(new Attacks("Wasserspritzer", "water", 50, 100, "none", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks("Hydration", "water", 0, 100, "heal", 25, "b")); 
         }
     }
 }

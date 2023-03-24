@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,8 +10,8 @@ namespace Pokegotchi_SWP
     internal class Attacks
     {
         //The attack Class is new, here will happend much in the future
-        private string _attackname, _typ, _sideeffect;
-        private int _damage, _PercentageOfSideeffect;
+        private string _attackname, _typ, _sideeffect, _PhyOrSpez;
+        private int _damage, _PercentageOfSideeffect, _accurancy;
         public static List<Attacks> AllAttacks = new List<Attacks>();
 
        #region Getter & Setter
@@ -39,17 +40,27 @@ namespace Pokegotchi_SWP
             get { return _PercentageOfSideeffect;}
             set { _PercentageOfSideeffect = value; }
         } 
+        public int accurancy
+        {
+            get { return _accurancy; }
+            set { _accurancy = value; }
+        }
+        public string PhyOrSpez
+        {
+            get { return _PhyOrSpez; }
+            set { _PhyOrSpez = value;}
+        }
 	#endregion
 
-        public Attacks(string attackname, string typ, string sideeffect, int damage, int percentageOfSideeffect)
+        public Attacks(string attackname, string typ, int damage, int accurancy, string sideeffect, int percentageOfSideeffect, string PhyOrSpez)
         {
             this.attackname = attackname;
             this.typ = typ;
+            this.accurancy = accurancy;
             this.sideeffect = sideeffect;
             this.damage = damage;
             this.percentageOfSideeffect = percentageOfSideeffect;
-
-            AllAttacks.Add(this);
+            this.PhyOrSpez=PhyOrSpez;
         }
 
 
