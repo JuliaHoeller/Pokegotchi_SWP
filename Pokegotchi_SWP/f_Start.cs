@@ -54,9 +54,33 @@ namespace Pokegotchi_SWP
 
         private void f_Start_Load(object sender, EventArgs e)
         {
-            Attacks.AllAttacks.Add(new Attacks("Wasserstoß", "water", 50, 100, "none", 0, "p"));
-            Attacks.AllAttacks.Add(new Attacks("Wasserspritzer", "water", 50, 100, "none", 0, "s"));
-            Attacks.AllAttacks.Add(new Attacks("Hydration", "water", 0, 100, "heal", 25, "b")); 
+            Attacks.AllAttacks.Add(new Attacks(1, "Wasserstoß", "water", 50, 100, "none", 0, "p"));
+            Attacks.AllAttacks.Add(new Attacks(2, "Aquastoß", "water", 85, 90, "Defesnse fall 1", 20, "p"));
+            Attacks.AllAttacks.Add(new Attacks(3, "Wasserklinge", "water", 120, 80, "Defense fall 1", 15, "p"));
+            Attacks.AllAttacks.Add(new Attacks(4, "Wasserspritzer", "water", 50, 100, "none", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks(5, "Wellenbruch", "water", 90, 100, "none", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks(6, "Hochdruckstrahl", "water", 115, 90, "none", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks(7, "Siedewasser", "water", 85, 100, "Burn", 20, "s"));
+            Attacks.AllAttacks.Add(new Attacks(8, "Hydration", "water", 0, 100, "Heal", 25, "b"));
+            Attacks.AllAttacks.Add(new Attacks(9, "Aquarisierung", "water", 0, 100, "Heal", 60, "b"));
+            Attacks.AllAttacks.Add(new Attacks(10, "Feuerwirbel", "fire", 60, 90, "none", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks(11, "Flammenwurf", "fire", 85, 100, "Burn", 10, "s"));
+            Attacks.AllAttacks.Add(new Attacks(12, "Flammentornado", "fire", 110, 80, "Burn", 25, "s"));
+            Attacks.AllAttacks.Add(new Attacks(13, "Hitzestoß", "fire", 150, 90, "SpezAttack fell 2", 0, "s"));
+            Attacks.AllAttacks.Add(new Attacks(14, "Feuerrad", "fire", 55, 100, "Defense fall 1", 0, "p"));
+            Attacks.AllAttacks.Add(new Attacks(15, "Flammenpeitsche", "fire", 75, 95, "Defense fall 1", 75, "p"));
+            Attacks.AllAttacks.Add(new Attacks(16, "Flammenklinge", "fire", 100, 100, "Defense fall 1", 50, "p"));
+            Attacks.AllAttacks.Add(new Attacks(17, "Hochofen", "fire", 0, 100, "Attack raise 1", 100, "b"));
+            Attacks.AllAttacks.Add(new Attacks(18, "Anzünden", "fire", 0, 70, "Burn", 100, "b"));
+            Attacks.AllAttacks.Add(new Attacks(19, "Erschütterung", "ground", 60, 100, "none", 0, "p"));
+            Attacks.AllAttacks.Add(new Attacks(20, "Intensität", "ground", 75, 100, "Speed fell 1", 30, "p"));
+            Attacks.AllAttacks.Add(new Attacks(21, "Erdbeben", "ground", 105, 100, "none", 0, "p"));
+            Attacks.AllAttacks.Add(new Attacks(22, "Brandsand", "ground", 70, 100, "Burn", 30, "s"));
+            Attacks.AllAttacks.Add(new Attacks(23, "Erdkräfte", "ground", 95, 100, "SpezDefense fell 1", 50, "s"));
+            Attacks.AllAttacks.Add(new Attacks(24, "Steinhaupt", "ground", 0, 100, "Defense raise 1", 0, "b"));
+
+            Random rnd = new Random();
+            MessageBox.Show(Attacks.AllAttacks[rnd.Next(Attacks.AllAttacks.Count)].AttackInformation());
         }
     }
 }

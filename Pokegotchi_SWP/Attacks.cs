@@ -11,10 +11,15 @@ namespace Pokegotchi_SWP
     {
         //The attack Class is new, here will happend much in the future
         private string _attackname, _typ, _sideeffect, _PhyOrSpez;
-        private int _damage, _PercentageOfSideeffect, _accurancy;
+        private int _damage, _PercentageOfSideeffect, _accurancy, _id;
         public static List<Attacks> AllAttacks = new List<Attacks>();
 
        #region Getter & Setter
+        public int id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 		 public string attackname
         {
             get { return _attackname; }
@@ -52,8 +57,9 @@ namespace Pokegotchi_SWP
         }
 	#endregion
 
-        public Attacks(string attackname, string typ, int damage, int accurancy, string sideeffect, int percentageOfSideeffect, string PhyOrSpez)
+        public Attacks(int id, string attackname, string typ, int damage, int accurancy, string sideeffect, int percentageOfSideeffect, string PhyOrSpez)
         {
+            this.id = id;
             this.attackname = attackname;
             this.typ = typ;
             this.accurancy = accurancy;
@@ -61,6 +67,32 @@ namespace Pokegotchi_SWP
             this.damage = damage;
             this.percentageOfSideeffect = percentageOfSideeffect;
             this.PhyOrSpez=PhyOrSpez;
+        }
+
+        public string AttackInformation()
+        {
+            string info = string.Empty;
+
+            string damagetype;
+            switch(PhyOrSpez)
+            {
+                case "p":
+                    damagetype = "Physisch";
+                    break;
+                case "s":
+                    damagetype = "Speziell";
+                    break;
+                case "b":
+                    damagetype = "buff";
+                    break;
+                default:
+                    damagetype = "nix";
+                    break;
+            }
+            
+            info += "ID: " + id + ", Name: " + attackname + ", Type: " + typ + ", Damage: " + damage + ", Genauigkeit: " + accurancy + ", Sideeffect: " + sideeffect + ", PercentageSideeffect: " + percentageOfSideeffect + ", PhyOrSpez: " + damagetype;
+
+            return info;
         }
 
 
