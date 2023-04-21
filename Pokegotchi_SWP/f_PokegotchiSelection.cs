@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Pokegotchi_SWP
 {
-    public partial class f_Fight : Form
+    public partial class f_PokegotchiSelection : Form
     {
-        public bool exit = false;
-
-        public f_Fight()
+        public f_PokegotchiSelection()
         {
             InitializeComponent();
-        }
-
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            exit = true;
-            this.Hide();
-            this.Dispose();
-
         }
     }
 }
