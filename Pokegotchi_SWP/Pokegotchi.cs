@@ -562,9 +562,59 @@ namespace Pokegotchi_SWP
                     break;
 
                 case "psycho":
-                    Neutraltypes.AddRange(new List<string>() {  });
-                    WeakTypes.AddRange(new List<string>() {  });
-                    StrongTypes.AddRange(new List<string>() {  });
+                    Neutraltypes.AddRange(new List<string>() { "water", "fire", "ground", "wind", "grass", "magma", "rock", "steam", "obi", "smoke", "crystal", "psycho", "electric", "sound", "time" });
+                    WeakTypes.AddRange(new List<string>() { "poison", "fairy" });
+                    StrongTypes.AddRange(new List<string>() { "ghost", "ice", "bug" });
+
+                    if (Neutraltypes.Contains(Defensetype))
+                        multiplyier = 1;
+                    else if (WeakTypes.Contains(Defensetype))
+                        multiplyier = 2;
+                    else if (StrongTypes.Contains(Defensetype))
+                        multiplyier = 0.5;
+                    else if (ImmunTypes.Contains(Defensetype))
+                        multiplyier = 0;
+                    else
+                        multiplyier = 0;
+                    break;
+
+                case "electric":
+                    Neutraltypes.AddRange(new List<string>() { "fire", "magma", "rock", "ghost", "ice", "obi", "poison", "bug", "crystal", "fairy", "psycho" });
+                    WeakTypes.AddRange(new List<string>() { "water", "wind", "steam", "smoke", "electric", "sound", "time" });
+                    StrongTypes.AddRange(new List<string>() { "grass" });
+                    ImmunTypes.AddRange(new List<string>() { "ground" })
+
+                    if (Neutraltypes.Contains(Defensetype))
+                        multiplyier = 1;
+                    else if (WeakTypes.Contains(Defensetype))
+                        multiplyier = 2;
+                    else if (StrongTypes.Contains(Defensetype))
+                        multiplyier = 0.5;
+                    else if (ImmunTypes.Contains(Defensetype))
+                        multiplyier = 0;
+                    else
+                        multiplyier = 0;
+                    break;
+
+                case "sound":
+                    Neutraltypes.AddRange(new List<string>() { "ground", "grass", "magma", "rock", "obi", "poison", "bug", "crystal", "fairy", "psycho" });
+                    WeakTypes.AddRange(new List<string>() { "water", "fire", "wind", "ghost", "ice", "steam", "smoke", "electric", "sound", "time" });
+
+                    if (Neutraltypes.Contains(Defensetype))
+                        multiplyier = 1;
+                    else if (WeakTypes.Contains(Defensetype))
+                        multiplyier = 2;
+                    else if (StrongTypes.Contains(Defensetype))
+                        multiplyier = 0.5;
+                    else if (ImmunTypes.Contains(Defensetype))
+                        multiplyier = 0;
+                    else
+                        multiplyier = 0;
+                    break;
+
+                case "time":
+                    Neutraltypes.AddRange(new List<string>() { "water", "fire", "ground", "wind", "grass", "magma", "rock", "ghost", "ice", "steam", "obi", "poison", "bug", "smoke", "crystal", "fairy", "psycho"});
+                    WeakTypes.AddRange(new List<string>() { "electric", "sound", "time" });
 
                     if (Neutraltypes.Contains(Defensetype))
                         multiplyier = 1;
