@@ -8,12 +8,12 @@ namespace Pokegotchi_SWP
 {
     internal class DamageCalculation
     {
-        public int Calculate(int Attackstat, int EnemyDefense, int AttackDamage, int Critchance, string AttackType, string UserType, string DefenseTyp1)
+        public int Calculate(int Attackstat, int EnemyDefense, int AttackDamage, int Critchance, string AttackType, string UserType, string DefenseTyp)
         {
             int Damage = 0;
             double CritMultipliyer = 1;
             double STAB = 1;
-            double TypeMultipliyer;
+            double TypeMultipliyer = 1; ;
 
             int Base = AttackDamage;
 
@@ -36,8 +36,9 @@ namespace Pokegotchi_SWP
             {
                 STAB = 1;
             }
+            TypeMultipliyer = Pokegotchi.TypeAdvantege(AttackType, DefenseTyp);
 
-            Damage = Convert.ToInt32(Base * Attackstat / EnemyDefense * CritMultipliyer);
+            Damage = Convert.ToInt32(Base * Attackstat / EnemyDefense * CritMultipliyer * TypeMultipliyer * (rnd.Next(85, 100) / 100));
             
             
 

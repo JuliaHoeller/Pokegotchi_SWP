@@ -392,7 +392,7 @@ namespace Pokegotchi_SWP
                     Neutraltypes.AddRange(new List<string>() { "ground", "magma", "rock", "fairy", "electric", "sound", "time"});
                     WeakTypes.AddRange(new List<string>() { "fire", "wind", "ice", "poison", "bug", "psycho"});
                     StrongTypes.AddRange(new List<string>() { "water", "grass", "smoke", "steam", "obi", "crystal" });
-                    ImmunTypes.AddRange(new List<string>() { "ghost" })
+                    ImmunTypes.AddRange(new List<string>() { "ghost" });
 
                     if (Neutraltypes.Contains(Defensetype))
                         multiplyier = 1;
@@ -461,7 +461,7 @@ namespace Pokegotchi_SWP
                     Neutraltypes.AddRange(new List<string>() { "grass", "magma", "ice", "obi", "poison", "bug", "smoke", "psycho", "sound", "time" });
                     WeakTypes.AddRange(new List<string>() { "fire", "rock", "wind", "fairy" });
                     StrongTypes.AddRange(new List<string>() { "water", "ground", "steam", "crystal", "electric" });
-                    ImmunTypes.AddRange(new List<string>)() { "ghost" }
+                    ImmunTypes.AddRange(new List<string>() { "ghost" });
 
                     if (Neutraltypes.Contains(Defensetype))
                         multiplyier = 1;
@@ -530,7 +530,7 @@ namespace Pokegotchi_SWP
                     Neutraltypes.AddRange(new List<string>() { "ground", "rock", "ice", "steam", "obi", "bug", "smoke", "crystal", "fairy", "electric", "sound", "time" });
                     WeakTypes.AddRange(new List<string>() { "fire", "wind" });
                     StrongTypes.AddRange(new List<string>() { "water", "grass", "magma", "poison", "psycho" });
-                    ImmunTypes.AddRange(new List<string>)() { "ghost" }
+                    ImmunTypes.AddRange(new List<string>() { "ghost" });
 
                     if (Neutraltypes.Contains(Defensetype))
                         multiplyier = 1;
@@ -582,7 +582,7 @@ namespace Pokegotchi_SWP
                     Neutraltypes.AddRange(new List<string>() { "fire", "magma", "rock", "ghost", "ice", "obi", "poison", "bug", "crystal", "fairy", "psycho" });
                     WeakTypes.AddRange(new List<string>() { "water", "wind", "steam", "smoke", "electric", "sound", "time" });
                     StrongTypes.AddRange(new List<string>() { "grass" });
-                    ImmunTypes.AddRange(new List<string>() { "ground" })
+                    ImmunTypes.AddRange(new List<string>() { "ground" });
 
                     if (Neutraltypes.Contains(Defensetype))
                         multiplyier = 1;
