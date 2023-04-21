@@ -142,6 +142,7 @@
             this.Controls.Add(this.pnlGetPokegotchi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "f_NewPokegotchi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Get your Pokegotchi";
             this.pnlGetPokegotchi.ResumeLayout(false);
             this.pnlGetPokegotchi.PerformLayout();

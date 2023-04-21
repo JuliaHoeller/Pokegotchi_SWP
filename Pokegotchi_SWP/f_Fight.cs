@@ -12,9 +12,19 @@ namespace Pokegotchi_SWP
 {
     public partial class f_Fight : Form
     {
+        public bool exit = false; 
+
         public f_Fight()
         {
             InitializeComponent();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            exit = true;
+            this.Hide();
+            this.Dispose();
+
         }
     }
 }
