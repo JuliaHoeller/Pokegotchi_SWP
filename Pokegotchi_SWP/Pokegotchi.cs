@@ -11,7 +11,7 @@ namespace Pokegotchi_SWP
     {
         //define all needed Variables
         //Some of them can be missing or not used, it depends on future devolpment
-        private string _race, _name, _typ1, _typ2;
+        private string _race, _name, _typ1;
         private int _level, _EXPhave, _EXPneeded, _Friendship, _HPbase, _ATKbase, _DEFbase, _SATKbase, _SDEFbase, _INITbase, _HP, _ATK, _DEF, _SATK, _SDEF, _INIT;
 
         #region Getter & Setter
@@ -30,11 +30,6 @@ namespace Pokegotchi_SWP
         {
             get { return _typ1; }
             set { _typ1 = value; }
-        }
-        public string typ2
-        {
-            get { return _typ2; }
-            set { _typ2 = value; }
         }
         public int level
         {
@@ -130,17 +125,15 @@ namespace Pokegotchi_SWP
 
         //Create a new Pokegotchi
         //All this stats are needed, because no Pokegotchi can exists without an HP Value or a ATK Value
-        public Pokegotchi(string race, string name, string typ1, string typ2, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
+        public Pokegotchi(string race, string name, string typ1, int level, int Friendship, int EXPHave, int HPbase, int ATKbase, int DEFbase, int SATKbase, int SDEFbase, int INITbase)
         {
             this.race = race;
             this.name = name;
             this.typ1 = typ1;
-            this.typ2 = typ2;
             this.level = level;
             this.Friendship = Friendship;
             this.EXPhave = EXPhave;
             this.typ1 = typ1;
-            this.typ2 = typ2;
 
             this.HPbase = HPbase;
             this.ATKbase = ATKbase;

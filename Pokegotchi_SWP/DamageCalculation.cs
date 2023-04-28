@@ -8,7 +8,7 @@ namespace Pokegotchi_SWP
 {
     internal class DamageCalculation
     {
-        public int Calculate(int Attackstat, int EnemyDefense, int AttackDamage, int Critchance, string AttackType, string UserType, string DefenseTyp)
+        public static int Calculate(int Attackstat, int EnemyDefense, int AttackDamage, int Critchance, string AttackType, string UserType, string DefenseTyp)
         {
             int Damage = 0;
             double CritMultipliyer = 1;
@@ -38,13 +38,48 @@ namespace Pokegotchi_SWP
             }
             TypeMultipliyer = Pokegotchi.TypeAdvantege(AttackType, DefenseTyp);
 
-            Damage = Convert.ToInt32(Base * Attackstat / EnemyDefense * CritMultipliyer * TypeMultipliyer * (rnd.Next(85, 100) / 100));
+            Damage = Convert.ToInt32(Base * Attackstat / EnemyDefense * CritMultipliyer * TypeMultipliyer * (rnd.Next(85, 100) / 100) * STAB);
             
-            
-
-
-
             return Damage;
+        }
+        public static int Calculate(int Attackstat, int EnemyDefense, Attacks attack, string UserType, string DefenseTyp)
+        {
+            double Damage = 0;
+            double CritMultipliyer = 1;
+            double STAB = 1;
+            double TypeMultipliyer = 1; ;
+
+            double Base = attack.damage;
+
+            Random rnd = new Random();
+            int CritOrNot = rnd.Next(1, 100);
+            if (CritOrNot <= 20)
+            {
+                CritMultipliyer = 1.35;
+            }
+            else
+            {
+                CritMultipliyer = 1;
+            }
+
+            if (attack.typ.Equals(UserType))
+            {
+                STAB = 1.5;
+            }
+            else
+            {
+                STAB = 1;
+            }
+            TypeMultipliyer = Pokegotchi.TypeAdvantege(attack.typ, DefenseTyp);
+            double atk = Convert.ToDouble(Attackstat);
+            double eDef = Convert.ToDouble(EnemyDefense);
+            double RandomValue = rnd.Next(1, 100);
+            RandomValue = RandomValue / 100;
+
+            Damage = (Base * atk / eDef) * CritMultipliyer * TypeMultipliyer * RandomValue * STAB;
+            int returnDamage = Convert.ToInt32(Damage);
+
+            return returnDamage;
         }
     }
 }

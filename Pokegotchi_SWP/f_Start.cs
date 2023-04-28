@@ -79,8 +79,13 @@ namespace Pokegotchi_SWP
             Attacks.AllAttacks.Add(new Attacks(23, "Erdkräfte", "ground", 95, 100, "SpezDefense fell 1", 50, "s"));
             Attacks.AllAttacks.Add(new Attacks(24, "Steinhaupt", "ground", 0, 100, "Defense raise 1", 0, "b"));
 
-            Random rnd = new Random();
-            MessageBox.Show(Attacks.AllAttacks[rnd.Next(Attacks.AllAttacks.Count)].AttackInformation());
+            //Random rnd = new Random();
+            //MessageBox.Show(Attacks.AllAttacks[rnd.Next(Attacks.AllAttacks.Count)].AttackInformation());
+
+
+            Pokegotchi test = new Pokegotchi("Testing Mon","test", "ghost", 10, 100, 100, 100, 100, 100, 100, 100, 100);
+            int damage = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[1], test.typ1, "wind");
+            MessageBox.Show("Health: " + test.HP + ", DamageAmount: " + damage);
         }
     }
 }
