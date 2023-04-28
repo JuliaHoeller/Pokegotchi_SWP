@@ -1,3 +1,5 @@
+using static System.Net.Mime.MediaTypeNames;
+
 namespace Pokegotchi_SWP
 {
     public partial class f_Start : Form
@@ -82,10 +84,17 @@ namespace Pokegotchi_SWP
             //Random rnd = new Random();
             //MessageBox.Show(Attacks.AllAttacks[rnd.Next(Attacks.AllAttacks.Count)].AttackInformation());
 
+            List<int> DamagePoints = new List<int>();
+            List<int> HealthPoints = new List<int>();
 
-            Pokegotchi test = new Pokegotchi("Testing Mon","test", "ghost", 10, 100, 100, 100, 100, 100, 100, 100, 100);
-            int damage = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[1], test.typ1, "wind");
-            MessageBox.Show("Health: " + test.HP + ", DamageAmount: " + damage);
+            for(int i = 1; i <= 100; i++)
+            {
+                Pokegotchi test = new Pokegotchi("Testing Mon", "test", "ghost", i, 100, 100, 100, 100, 100, 100, 100, 100);
+                int damage = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[1], test.typ1, "wind");
+                DamagePoints.Add(damage);
+                HealthPoints.Add(test.HP);
+            }
+            
         }
     }
 }
