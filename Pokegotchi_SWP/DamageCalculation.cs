@@ -42,7 +42,7 @@ namespace Pokegotchi_SWP
             
             return Damage;
         }
-        public static int Calculate(int Attackstat, int EnemyDefense, Attacks attack, string UserType, string DefenseTyp)
+        public static int Calculate(int Attackstat, int EnemyDefense, Attacks attack, string UserType, string DefenseTyp, int level)
         {
             double Damage = 0;
             double CritMultipliyer = 1;
@@ -73,10 +73,11 @@ namespace Pokegotchi_SWP
             TypeMultipliyer = Pokegotchi.TypeAdvantege(attack.typ, DefenseTyp);
             double atk = Convert.ToDouble(Attackstat);
             double eDef = Convert.ToDouble(EnemyDefense);
-            double RandomValue = rnd.Next(1, 100);
+            double DoubleLevel = Convert.ToDouble(level) * 4;
+            double RandomValue = rnd.Next(85, 100);
             RandomValue = RandomValue / 100;
 
-            Damage = (Base * atk / eDef) * CritMultipliyer * TypeMultipliyer * RandomValue * STAB;
+            Damage = ((DoubleLevel/5 + 2) * Base * 1.4 * atk / eDef)/50 * CritMultipliyer * TypeMultipliyer * RandomValue * STAB;
             int returnDamage = Convert.ToInt32(Damage);
 
             return returnDamage;
