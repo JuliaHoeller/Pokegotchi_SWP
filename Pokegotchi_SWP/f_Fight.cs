@@ -12,7 +12,7 @@ namespace Pokegotchi_SWP
 {
     public partial class f_Fight : Form
     {
-        public bool exit = false;
+        public bool exit1 = false;
 
         public f_Fight()
         {
@@ -21,7 +21,7 @@ namespace Pokegotchi_SWP
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            exit = true;
+            exit1 = true;
             this.Hide();
             this.Dispose();
 

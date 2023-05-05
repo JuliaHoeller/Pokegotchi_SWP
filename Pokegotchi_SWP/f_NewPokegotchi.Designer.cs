@@ -74,6 +74,7 @@
             pbPokegotchiEgg1.SizeMode = PictureBoxSizeMode.Zoom;
             pbPokegotchiEgg1.TabIndex = 1;
             pbPokegotchiEgg1.TabStop = false;
+            pbPokegotchiEgg1.Click += pbPokegotchiEgg1_Click;
             // 
             // pbPokegotchiEgg2
             // 
@@ -85,6 +86,7 @@
             pbPokegotchiEgg2.SizeMode = PictureBoxSizeMode.Zoom;
             pbPokegotchiEgg2.TabIndex = 2;
             pbPokegotchiEgg2.TabStop = false;
+            pbPokegotchiEgg2.Click += pbPokegotchiEgg2_Click;
             // 
             // pbPokegotchiEgg3
             // 
@@ -96,6 +98,7 @@
             pbPokegotchiEgg3.SizeMode = PictureBoxSizeMode.Zoom;
             pbPokegotchiEgg3.TabIndex = 3;
             pbPokegotchiEgg3.TabStop = false;
+            pbPokegotchiEgg3.Click += pbPokegotchiEgg3_Click;
             // 
             // lblPokegotchiEgg1
             // 

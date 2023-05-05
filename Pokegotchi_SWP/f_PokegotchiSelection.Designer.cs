@@ -42,6 +42,7 @@
             lblPokegotchi4Level = new Label();
             btnStartFight = new Button();
             cblSelectPokegotchi = new CheckedListBox();
+            btn_Back = new Button();
             ((System.ComponentModel.ISupportInitialize)pbPokegotchi1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPokegotchi4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPokegotchi3).BeginInit();
@@ -177,6 +178,7 @@
             btnStartFight.TabIndex = 12;
             btnStartFight.Text = "Kampf starten";
             btnStartFight.UseVisualStyleBackColor = true;
+            btnStartFight.Click += btnStartFight_Click;
             // 
             // cblSelectPokegotchi
             // 
@@ -185,14 +187,25 @@
             cblSelectPokegotchi.Items.AddRange(new object[] { "Venti (Lvl. 3000.)", "Venti (Lvl. 3000.)" });
             cblSelectPokegotchi.Location = new Point(41, 22);
             cblSelectPokegotchi.Name = "cblSelectPokegotchi";
-            cblSelectPokegotchi.Size = new Size(271, 256);
+            cblSelectPokegotchi.Size = new Size(271, 242);
             cblSelectPokegotchi.TabIndex = 13;
+            // 
+            // btn_Back
+            // 
+            btn_Back.Location = new Point(675, 302);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(113, 23);
+            btn_Back.TabIndex = 14;
+            btn_Back.Text = "Zurück";
+            btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Click += btn_Back_Click;
             // 
             // f_PokegotchiSelection
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 337);
+            Controls.Add(btn_Back);
             Controls.Add(cblSelectPokegotchi);
             Controls.Add(btnStartFight);
             Controls.Add(lblPokegotchi4Level);
@@ -207,6 +220,7 @@
             Controls.Add(pbPokegotchi3);
             Controls.Add(pbPokegotchi4);
             Controls.Add(pbPokegotchi1);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "f_PokegotchiSelection";
             Text = "f_PokegotchiSelection";
             ((System.ComponentModel.ISupportInitialize)pbPokegotchi1).EndInit();
@@ -233,5 +247,6 @@
         private Label lblPokegotchi4Level;
         private Button btnStartFight;
         private CheckedListBox cblSelectPokegotchi;
+        private Button btn_Back;
     }
 }

@@ -24,13 +24,13 @@ namespace Pokegotchi_SWP
             f_Care care = new f_Care();
             this.Hide();
             care.ShowDialog();
-            
-            if(care.exit == true)
+
+            if (care.exit == true)
             {
                 this.Show();
             }
 
-            else if(care.exit == false)
+            else if (care.exit == false)
             {
                 Environment.Exit(3);
             }
@@ -46,20 +46,37 @@ namespace Pokegotchi_SWP
 
         private void btnFight_Click(object sender, EventArgs e)
         {
-            f_Fight fight = new f_Fight();
+            f_PokegotchiSelection fightselection = new f_PokegotchiSelection();
             this.Hide();
-            fight.ShowDialog();
+            fightselection.ShowDialog();
 
-            if(fight.exit == true)
+            if (fightselection.exit == true)
             {
                 this.Show();
             }
 
-            else if(fight.exit == false)
+            else if (fightselection.exit == false)
             {
                 Environment.Exit(4);
             }
 
+        }
+
+        private void btnBreed_Click(object sender, EventArgs e)
+        {
+            f_Breed breed = new f_Breed();
+            this.Hide();
+            breed.ShowDialog();
+
+            if (breed.exit == true)
+            {
+                this.Show();
+            }
+
+            else if (breed.exit == false)
+            {
+                Environment.Exit(4);
+            }
         }
     }
 }

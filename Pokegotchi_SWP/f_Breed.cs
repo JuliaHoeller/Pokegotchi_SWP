@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Pokegotchi_SWP
 {
-    public partial class f_PokegotchiSelection : Form
+    public partial class f_Breed : Form
     {
         public bool exit = false;
-        public f_PokegotchiSelection()
+        public f_Breed()
         {
             InitializeComponent();
         }
@@ -23,14 +23,6 @@ namespace Pokegotchi_SWP
             exit = true;
             this.Hide();
             this.Dispose();
-        }
-
-        private void btnStartFight_Click(object sender, EventArgs e)
-        {
-            f_Fight fight = new f_Fight();
-
-            this.Hide();
-            fight.ShowDialog();
         }
     }
 }
