@@ -28,101 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbFavPokegotchi = new System.Windows.Forms.PictureBox();
-            this.btnFight = new System.Windows.Forms.Button();
-            this.btnBreed = new System.Windows.Forms.Button();
-            this.btnCare = new System.Windows.Forms.Button();
-            this.btnShop = new System.Windows.Forms.Button();
-            this.btn_back = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFavPokegotchi)).BeginInit();
-            this.SuspendLayout();
+            pbFavPokegotchi = new PictureBox();
+            btnFight = new Button();
+            btnBreed = new Button();
+            btnCare = new Button();
+            btnShop = new Button();
+            btn_back = new Button();
+            ((System.ComponentModel.ISupportInitialize)pbFavPokegotchi).BeginInit();
+            SuspendLayout();
             // 
             // pbFavPokegotchi
             // 
-            this.pbFavPokegotchi.Image = global::Pokegotchi_SWP.Properties.Resources.venti;
-            this.pbFavPokegotchi.Location = new System.Drawing.Point(436, 283);
-            this.pbFavPokegotchi.Name = "pbFavPokegotchi";
-            this.pbFavPokegotchi.Size = new System.Drawing.Size(292, 293);
-            this.pbFavPokegotchi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFavPokegotchi.TabIndex = 0;
-            this.pbFavPokegotchi.TabStop = false;
+            pbFavPokegotchi.Image = Properties.Resources.venti;
+            pbFavPokegotchi.Location = new Point(436, 283);
+            pbFavPokegotchi.Name = "pbFavPokegotchi";
+            pbFavPokegotchi.Size = new Size(292, 293);
+            pbFavPokegotchi.SizeMode = PictureBoxSizeMode.Zoom;
+            pbFavPokegotchi.TabIndex = 0;
+            pbFavPokegotchi.TabStop = false;
             // 
             // btnFight
             // 
-            this.btnFight.BackColor = System.Drawing.Color.White;
-            this.btnFight.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFight.Location = new System.Drawing.Point(106, 30);
-            this.btnFight.Name = "btnFight";
-            this.btnFight.Size = new System.Drawing.Size(200, 58);
-            this.btnFight.TabIndex = 1;
-            this.btnFight.Text = "Kampf";
-            this.btnFight.UseVisualStyleBackColor = false;
-            this.btnFight.Click += new System.EventHandler(this.btnFight_Click);
+            btnFight.BackColor = Color.White;
+            btnFight.Font = new Font("Franklin Gothic Book", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFight.Location = new Point(106, 30);
+            btnFight.Name = "btnFight";
+            btnFight.Size = new Size(200, 58);
+            btnFight.TabIndex = 1;
+            btnFight.Text = "Kampf";
+            btnFight.UseVisualStyleBackColor = false;
+            btnFight.Click += btnFight_Click;
             // 
             // btnBreed
             // 
-            this.btnBreed.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBreed.Location = new System.Drawing.Point(486, 30);
-            this.btnBreed.Name = "btnBreed";
-            this.btnBreed.Size = new System.Drawing.Size(200, 58);
-            this.btnBreed.TabIndex = 2;
-            this.btnBreed.Text = "Zucht";
-            this.btnBreed.UseVisualStyleBackColor = true;
+            btnBreed.Font = new Font("Franklin Gothic Book", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBreed.Location = new Point(486, 30);
+            btnBreed.Name = "btnBreed";
+            btnBreed.Size = new Size(200, 58);
+            btnBreed.TabIndex = 2;
+            btnBreed.Text = "Zucht";
+            btnBreed.UseVisualStyleBackColor = true;
+            btnBreed.Click += btnBreed_Click;
             // 
             // btnCare
             // 
-            this.btnCare.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCare.Location = new System.Drawing.Point(866, 30);
-            this.btnCare.Name = "btnCare";
-            this.btnCare.Size = new System.Drawing.Size(200, 58);
-            this.btnCare.TabIndex = 3;
-            this.btnCare.Text = "Kümmern";
-            this.btnCare.UseVisualStyleBackColor = true;
-            this.btnCare.Click += new System.EventHandler(this.btnCare_Click);
+            btnCare.Font = new Font("Franklin Gothic Book", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCare.Location = new Point(866, 30);
+            btnCare.Name = "btnCare";
+            btnCare.Size = new Size(200, 58);
+            btnCare.TabIndex = 3;
+            btnCare.Text = "Kümmern";
+            btnCare.UseVisualStyleBackColor = true;
+            btnCare.Click += btnCare_Click;
             // 
             // btnShop
             // 
-            this.btnShop.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnShop.Location = new System.Drawing.Point(1004, 584);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(141, 38);
-            this.btnShop.TabIndex = 4;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = true;
+            btnShop.Font = new Font("Franklin Gothic Book", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnShop.Location = new Point(1004, 584);
+            btnShop.Name = "btnShop";
+            btnShop.Size = new Size(141, 38);
+            btnShop.TabIndex = 4;
+            btnShop.Text = "Shop";
+            btnShop.UseVisualStyleBackColor = true;
             // 
             // btn_back
             // 
-            this.btn_back.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_back.Location = new System.Drawing.Point(115, 582);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(117, 37);
-            this.btn_back.TabIndex = 5;
-            this.btn_back.Text = "zurück";
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            btn_back.Font = new Font("Franklin Gothic Book", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_back.Location = new Point(115, 582);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(117, 37);
+            btn_back.TabIndex = 5;
+            btn_back.Text = "zurück";
+            btn_back.UseVisualStyleBackColor = true;
+            btn_back.Click += btn_back_Click;
             // 
             // f_Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Pokegotchi_SWP.Properties.Resources.Livingroom;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1173, 631);
-            this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.btnShop);
-            this.Controls.Add(this.btnCare);
-            this.Controls.Add(this.btnBreed);
-            this.Controls.Add(this.btnFight);
-            this.Controls.Add(this.pbFavPokegotchi);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "f_Home";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Appartment";
-            ((System.ComponentModel.ISupportInitialize)(this.pbFavPokegotchi)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            BackgroundImage = Properties.Resources.Livingroom;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1173, 631);
+            Controls.Add(btn_back);
+            Controls.Add(btnShop);
+            Controls.Add(btnCare);
+            Controls.Add(btnBreed);
+            Controls.Add(btnFight);
+            Controls.Add(pbFavPokegotchi);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Name = "f_Home";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Appartment";
+            ((System.ComponentModel.ISupportInitialize)pbFavPokegotchi).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

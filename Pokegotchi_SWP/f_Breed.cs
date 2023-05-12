@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace Pokegotchi_SWP
 {
-    public partial class f_Fight : Form
+    public partial class f_Breed : Form
     {
-        public bool exit1 = false;
-
-        public f_Fight()
+        public bool exit = false;
+        public f_Breed()
         {
             InitializeComponent();
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-            exit1 = true;
+            exit = true;
             this.Hide();
             this.Dispose();
-
         }
     }
 }
