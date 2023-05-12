@@ -34,17 +34,15 @@ namespace Pokegotchi_SWP
             f_Home home = new f_Home();
             this.Hide();
             home.ShowDialog();
+
         }
 
         private void pbPokegotchiEgg3_Click(object sender, EventArgs e)
         {
             chosenpokegotchi = 3;
-
             f_Home home = new f_Home();
             this.Hide();
             home.ShowDialog();
-
-
         }
     }
 }

@@ -65,7 +65,7 @@
             lblHeadingGetPokegotchi.Text = "Wähle dein Pokegotchi-Ei:";
             // 
             // pbPokegotchiEgg1
-            // 
+            //
             pbPokegotchiEgg1.Cursor = Cursors.Hand;
             pbPokegotchiEgg1.Image = Properties.Resources.Egg;
             pbPokegotchiEgg1.Location = new Point(67, 148);
@@ -99,6 +99,7 @@
             pbPokegotchiEgg3.TabIndex = 3;
             pbPokegotchiEgg3.TabStop = false;
             pbPokegotchiEgg3.Click += pbPokegotchiEgg3_Click;
+
             // 
             // lblPokegotchiEgg1
             // 
