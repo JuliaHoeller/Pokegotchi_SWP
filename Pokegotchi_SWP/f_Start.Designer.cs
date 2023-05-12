@@ -28,99 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbl_Start = new System.Windows.Forms.Panel();
-            this.lbl_Start = new System.Windows.Forms.Label();
-            this.btnLoadGame = new System.Windows.Forms.Button();
-            this.btnCredits = new System.Windows.Forms.Button();
-            this.btnNewGame = new System.Windows.Forms.Button();
-            this.pbl_Start.SuspendLayout();
-            this.SuspendLayout();
+            pbl_Start = new Panel();
+            lbl_Start = new Label();
+            btnLoadGame = new Button();
+            btnCredits = new Button();
+            btnNewGame = new Button();
+            pbl_Start.SuspendLayout();
+            SuspendLayout();
             // 
             // pbl_Start
             // 
-            this.pbl_Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(162)))), ((int)(((byte)(179)))));
-            this.pbl_Start.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbl_Start.Controls.Add(this.lbl_Start);
-            this.pbl_Start.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbl_Start.Location = new System.Drawing.Point(0, 0);
-            this.pbl_Start.Name = "pbl_Start";
-            this.pbl_Start.Size = new System.Drawing.Size(384, 154);
-            this.pbl_Start.TabIndex = 0;
+            pbl_Start.BackColor = Color.FromArgb(43, 162, 179);
+            pbl_Start.BorderStyle = BorderStyle.FixedSingle;
+            pbl_Start.Controls.Add(lbl_Start);
+            pbl_Start.Dock = DockStyle.Top;
+            pbl_Start.Location = new Point(0, 0);
+            pbl_Start.Name = "pbl_Start";
+            pbl_Start.Size = new Size(384, 154);
+            pbl_Start.TabIndex = 0;
             // 
             // lbl_Start
             // 
-            this.lbl_Start.AutoSize = true;
-            this.lbl_Start.Font = new System.Drawing.Font("Franklin Gothic Book", 33.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Start.ForeColor = System.Drawing.Color.White;
-            this.lbl_Start.Location = new System.Drawing.Point(80, 63);
-            this.lbl_Start.Name = "lbl_Start";
-            this.lbl_Start.Size = new System.Drawing.Size(230, 52);
-            this.lbl_Start.TabIndex = 0;
-            this.lbl_Start.Text = "Pokegotchi";
+            lbl_Start.AutoSize = true;
+            lbl_Start.Font = new Font("Franklin Gothic Book", 33.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Start.ForeColor = Color.White;
+            lbl_Start.Location = new Point(80, 63);
+            lbl_Start.Name = "lbl_Start";
+            lbl_Start.Size = new Size(230, 52);
+            lbl_Start.TabIndex = 0;
+            lbl_Start.Text = "Pokegotchi";
             // 
             // btnLoadGame
             // 
-            this.btnLoadGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(162)))), ((int)(((byte)(179)))));
-            this.btnLoadGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoadGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoadGame.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLoadGame.ForeColor = System.Drawing.Color.White;
-            this.btnLoadGame.Location = new System.Drawing.Point(81, 313);
-            this.btnLoadGame.Name = "btnLoadGame";
-            this.btnLoadGame.Size = new System.Drawing.Size(230, 86);
-            this.btnLoadGame.TabIndex = 2;
-            this.btnLoadGame.Text = "Spiel laden";
-            this.btnLoadGame.UseVisualStyleBackColor = false;
-            this.btnLoadGame.Click += new System.EventHandler(this.btnLoadGame_Click);
+            btnLoadGame.BackColor = Color.FromArgb(43, 162, 179);
+            btnLoadGame.Cursor = Cursors.Hand;
+            btnLoadGame.FlatStyle = FlatStyle.Popup;
+            btnLoadGame.Font = new Font("Franklin Gothic Book", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLoadGame.ForeColor = Color.White;
+            btnLoadGame.Location = new Point(81, 313);
+            btnLoadGame.Name = "btnLoadGame";
+            btnLoadGame.Size = new Size(230, 86);
+            btnLoadGame.TabIndex = 2;
+            btnLoadGame.Text = "Spiel laden";
+            btnLoadGame.UseVisualStyleBackColor = false;
+            btnLoadGame.Click += btnLoadGame_Click;
             // 
             // btnCredits
             // 
-            this.btnCredits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(162)))), ((int)(((byte)(179)))));
-            this.btnCredits.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCredits.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCredits.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCredits.ForeColor = System.Drawing.Color.White;
-            this.btnCredits.Location = new System.Drawing.Point(81, 421);
-            this.btnCredits.Name = "btnCredits";
-            this.btnCredits.Size = new System.Drawing.Size(230, 86);
-            this.btnCredits.TabIndex = 3;
-            this.btnCredits.Text = "Credits";
-            this.btnCredits.UseVisualStyleBackColor = false;
-            this.btnCredits.Click += new System.EventHandler(this.btnCredits_Click);
+            btnCredits.BackColor = Color.FromArgb(43, 162, 179);
+            btnCredits.Cursor = Cursors.Hand;
+            btnCredits.FlatStyle = FlatStyle.Popup;
+            btnCredits.Font = new Font("Franklin Gothic Book", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCredits.ForeColor = Color.White;
+            btnCredits.Location = new Point(81, 421);
+            btnCredits.Name = "btnCredits";
+            btnCredits.Size = new Size(230, 86);
+            btnCredits.TabIndex = 3;
+            btnCredits.Text = "Credits";
+            btnCredits.UseVisualStyleBackColor = false;
+            btnCredits.Click += btnCredits_Click;
             // 
             // btnNewGame
             // 
-            this.btnNewGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(162)))), ((int)(((byte)(179)))));
-            this.btnNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNewGame.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNewGame.ForeColor = System.Drawing.Color.White;
-            this.btnNewGame.Location = new System.Drawing.Point(81, 205);
-            this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(230, 86);
-            this.btnNewGame.TabIndex = 4;
-            this.btnNewGame.Text = "Neues Spiel";
-            this.btnNewGame.UseVisualStyleBackColor = false;
-            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            btnNewGame.BackColor = Color.FromArgb(43, 162, 179);
+            btnNewGame.Cursor = Cursors.Hand;
+            btnNewGame.FlatStyle = FlatStyle.Popup;
+            btnNewGame.Font = new Font("Franklin Gothic Book", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNewGame.ForeColor = Color.White;
+            btnNewGame.Location = new Point(81, 205);
+            btnNewGame.Name = "btnNewGame";
+            btnNewGame.Size = new Size(230, 86);
+            btnNewGame.TabIndex = 4;
+            btnNewGame.Text = "Neues Spiel";
+            btnNewGame.UseVisualStyleBackColor = false;
+            btnNewGame.Click += btnNewGame_Click;
             // 
             // f_Start
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(384, 563);
-            this.Controls.Add(this.btnNewGame);
-            this.Controls.Add(this.btnCredits);
-            this.Controls.Add(this.btnLoadGame);
-            this.Controls.Add(this.pbl_Start);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "f_Start";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Start";
-            this.pbl_Start.ResumeLayout(false);
-            this.pbl_Start.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(384, 563);
+            Controls.Add(btnNewGame);
+            Controls.Add(btnCredits);
+            Controls.Add(btnLoadGame);
+            Controls.Add(pbl_Start);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "f_Start";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Start";
+            Load += f_Start_Load;
+            pbl_Start.ResumeLayout(false);
+            pbl_Start.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
