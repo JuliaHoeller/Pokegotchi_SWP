@@ -52,15 +52,15 @@ namespace Pokegotchi_SWP
             double Base = attack.damage;
 
             Random rnd = new Random();
-            int CritOrNot = rnd.Next(1, 100);
-            if (CritOrNot <= 20)
-            {
-                CritMultipliyer = 1.35;
-            }
-            else
-            {
-                CritMultipliyer = 1;
-            }
+            //int CritOrNot = rnd.Next(1, 100);
+            //if (CritOrNot <= 20)
+            //{
+            //    CritMultipliyer = 1.35;
+            //}
+            //else
+            //{
+            //    CritMultipliyer = 1;
+            //}
 
             if (attack.typ.Equals(UserType))
             {
@@ -77,7 +77,8 @@ namespace Pokegotchi_SWP
             double RandomValue = rnd.Next(85, 100);
             RandomValue = RandomValue / 100;
 
-            Damage = ((DoubleLevel/5 + 2) * Base * 1.4 * atk / eDef)/50 * CritMultipliyer * TypeMultipliyer * RandomValue * STAB;
+            Damage = ((DoubleLevel / 5 + 2) * Base * 1.4 * atk / eDef) / 50 * CritMultipliyer * TypeMultipliyer * RandomValue * STAB;
+
             int returnDamage = Convert.ToInt32(Damage);
 
             return returnDamage;

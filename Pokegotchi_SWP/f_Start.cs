@@ -86,26 +86,26 @@ namespace Pokegotchi_SWP
             //MessageBox.Show(Attacks.AllAttacks[rnd.Next(Attacks.AllAttacks.Count)].AttackInformation());
 
 
-            //string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //StreamWriter writer = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true);
-            
-            //for (int i = 1; i <= 100; i++)
-            //{
-            //    Pokegotchi test = new Pokegotchi("Testing Mon", "test", "ghost", i, 100, 100, 100, 100, 100, 100, 100, 100);
-            //    int damage = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[1], test.typ1, "wind", test.level);
-            //    int damage2 = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[0], test.typ1, "wind", test.level);
-            //    int damage3 = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[2], test.typ1, "wind", test.level);
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            StreamWriter writer = new StreamWriter(Path.Combine(docPath, "WriteLines.txt"), true);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                Pokegotchi test = new Pokegotchi("Testing Mon", "test", "ghost", i, 100, 100, 100, 100, 100, 100, 100, 100);
+                int damage = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[1], test.typ1, "wind", test.level);
+                int damage2 = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[0], test.typ1, "wind", test.level);
+                int damage3 = DamageCalculation.Calculate(test.ATK, test.DEF, Attacks.AllAttacks[2], test.typ1, "wind", test.level);
 
 
-            //    writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Damage: " + damage2 + ", Attack: " + Attacks.AllAttacks[0].attackname + ", Basepower: " + Attacks.AllAttacks[0].damage);
-            //    writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Damage: " + damage + ", Attack: " + Attacks.AllAttacks[1].attackname + ", Basepower: " + Attacks.AllAttacks[1].damage);
-            //    writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Damage: " + damage3 + ", Attack: " + Attacks.AllAttacks[2].attackname + ", Basepower: " + Attacks.AllAttacks[2].damage);
+                //writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Damage: " + damage2 + ", Attack: " + Attacks.AllAttacks[0].attackname + ", Basepower: " + Attacks.AllAttacks[0].damage);
+                writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Attackstat: " + test.ATK + ", Damage: " + damage + ", Attack: " + Attacks.AllAttacks[1].attackname + ", Basepower: " + Attacks.AllAttacks[1].damage);
+                //writer.WriteLine("Level:" + i + ", Health: " + test.HP + ", Damage: " + damage3 + ", Attack: " + Attacks.AllAttacks[2].attackname + ", Basepower: " + Attacks.AllAttacks[2].damage);
 
-            //}
-            //writer.Flush();
-            //writer.Close();
-            
-           
+            }
+            writer.Flush();
+            writer.Close();
+
+
         }
     }
 }
