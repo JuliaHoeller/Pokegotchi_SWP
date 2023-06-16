@@ -83,6 +83,16 @@ namespace Pokegotchi_SWP.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fireboy_Feuer {
+            get {
+                object obj = ResourceManager.GetObject("Fireboy_Feuer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Livingroom {
             get {
                 object obj = ResourceManager.GetObject("Livingroom", resourceCulture);
@@ -96,6 +106,16 @@ namespace Pokegotchi_SWP.Properties {
         internal static System.Drawing.Bitmap venti {
             get {
                 object obj = ResourceManager.GetObject("venti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zucht_ICON {
+            get {
+                object obj = ResourceManager.GetObject("Zucht_ICON", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
