@@ -28,130 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlGetPokegotchi = new System.Windows.Forms.Panel();
-            this.lblHeadingGetPokegotchi = new System.Windows.Forms.Label();
-            this.pbPokegotchiEgg1 = new System.Windows.Forms.PictureBox();
-            this.pbPokegotchiEgg2 = new System.Windows.Forms.PictureBox();
-            this.pbPokegotchiEgg3 = new System.Windows.Forms.PictureBox();
-            this.lblPokegotchiEgg1 = new System.Windows.Forms.Label();
-            this.lblPokegotchiEgg2 = new System.Windows.Forms.Label();
-            this.lblPokegotchiEgg3 = new System.Windows.Forms.Label();
-            this.pnlGetPokegotchi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg3)).BeginInit();
-            this.SuspendLayout();
+            pnlGetPokegotchi = new Panel();
+            lblHeadingGetPokegotchi = new Label();
+            pbPokegotchiEgg1 = new PictureBox();
+            pbPokegotchiEgg2 = new PictureBox();
+            pbPokegotchiEgg3 = new PictureBox();
+            lblPokegotchiEgg1 = new Label();
+            lblPokegotchiEgg2 = new Label();
+            lblPokegotchiEgg3 = new Label();
+            pnlGetPokegotchi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg3).BeginInit();
+            SuspendLayout();
             // 
             // pnlGetPokegotchi
             // 
-            this.pnlGetPokegotchi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(162)))), ((int)(((byte)(179)))));
-            this.pnlGetPokegotchi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlGetPokegotchi.Controls.Add(this.lblHeadingGetPokegotchi);
-            this.pnlGetPokegotchi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGetPokegotchi.Location = new System.Drawing.Point(0, 0);
-            this.pnlGetPokegotchi.Name = "pnlGetPokegotchi";
-            this.pnlGetPokegotchi.Size = new System.Drawing.Size(634, 98);
-            this.pnlGetPokegotchi.TabIndex = 0;
+            pnlGetPokegotchi.BackColor = Color.FromArgb(43, 162, 179);
+            pnlGetPokegotchi.BorderStyle = BorderStyle.FixedSingle;
+            pnlGetPokegotchi.Controls.Add(lblHeadingGetPokegotchi);
+            pnlGetPokegotchi.Dock = DockStyle.Top;
+            pnlGetPokegotchi.Location = new Point(0, 0);
+            pnlGetPokegotchi.Name = "pnlGetPokegotchi";
+            pnlGetPokegotchi.Size = new Size(634, 98);
+            pnlGetPokegotchi.TabIndex = 0;
             // 
             // lblHeadingGetPokegotchi
             // 
-            this.lblHeadingGetPokegotchi.AutoSize = true;
-            this.lblHeadingGetPokegotchi.Font = new System.Drawing.Font("Franklin Gothic Book", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHeadingGetPokegotchi.ForeColor = System.Drawing.Color.White;
-            this.lblHeadingGetPokegotchi.Location = new System.Drawing.Point(-1, 53);
-            this.lblHeadingGetPokegotchi.Name = "lblHeadingGetPokegotchi";
-            this.lblHeadingGetPokegotchi.Size = new System.Drawing.Size(410, 42);
-            this.lblHeadingGetPokegotchi.TabIndex = 0;
-            this.lblHeadingGetPokegotchi.Text = "Wähle dein Pokegotchi-Ei:";
+            lblHeadingGetPokegotchi.AutoSize = true;
+            lblHeadingGetPokegotchi.Font = new Font("Franklin Gothic Book", 27F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHeadingGetPokegotchi.ForeColor = Color.White;
+            lblHeadingGetPokegotchi.Location = new Point(-1, 53);
+            lblHeadingGetPokegotchi.Name = "lblHeadingGetPokegotchi";
+            lblHeadingGetPokegotchi.Size = new Size(410, 42);
+            lblHeadingGetPokegotchi.TabIndex = 0;
+            lblHeadingGetPokegotchi.Text = "Wähle dein Pokegotchi-Ei:";
             // 
             // pbPokegotchiEgg1
-            // 
-            this.pbPokegotchiEgg1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPokegotchiEgg1.Image = global::Pokegotchi_SWP.Properties.Resources.Egg;
-            this.pbPokegotchiEgg1.Location = new System.Drawing.Point(67, 148);
-            this.pbPokegotchiEgg1.Name = "pbPokegotchiEgg1";
-            this.pbPokegotchiEgg1.Size = new System.Drawing.Size(111, 98);
-            this.pbPokegotchiEgg1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPokegotchiEgg1.TabIndex = 1;
-            this.pbPokegotchiEgg1.TabStop = false;
+            //
+            pbPokegotchiEgg1.Cursor = Cursors.Hand;
+            pbPokegotchiEgg1.Image = Properties.Resources.Egg;
+            pbPokegotchiEgg1.Location = new Point(67, 148);
+            pbPokegotchiEgg1.Name = "pbPokegotchiEgg1";
+            pbPokegotchiEgg1.Size = new Size(111, 98);
+            pbPokegotchiEgg1.SizeMode = PictureBoxSizeMode.Zoom;
+            pbPokegotchiEgg1.TabIndex = 1;
+            pbPokegotchiEgg1.TabStop = false;
+            pbPokegotchiEgg1.Click += pbPokegotchiEgg1_Click;
             // 
             // pbPokegotchiEgg2
             // 
-            this.pbPokegotchiEgg2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPokegotchiEgg2.Image = global::Pokegotchi_SWP.Properties.Resources.Egg;
-            this.pbPokegotchiEgg2.Location = new System.Drawing.Point(267, 148);
-            this.pbPokegotchiEgg2.Name = "pbPokegotchiEgg2";
-            this.pbPokegotchiEgg2.Size = new System.Drawing.Size(111, 98);
-            this.pbPokegotchiEgg2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPokegotchiEgg2.TabIndex = 2;
-            this.pbPokegotchiEgg2.TabStop = false;
+            pbPokegotchiEgg2.Cursor = Cursors.Hand;
+            pbPokegotchiEgg2.Image = Properties.Resources.Egg;
+            pbPokegotchiEgg2.Location = new Point(267, 148);
+            pbPokegotchiEgg2.Name = "pbPokegotchiEgg2";
+            pbPokegotchiEgg2.Size = new Size(111, 98);
+            pbPokegotchiEgg2.SizeMode = PictureBoxSizeMode.Zoom;
+            pbPokegotchiEgg2.TabIndex = 2;
+            pbPokegotchiEgg2.TabStop = false;
+            pbPokegotchiEgg2.Click += pbPokegotchiEgg2_Click;
             // 
             // pbPokegotchiEgg3
             // 
-            this.pbPokegotchiEgg3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbPokegotchiEgg3.Image = global::Pokegotchi_SWP.Properties.Resources.Egg;
-            this.pbPokegotchiEgg3.Location = new System.Drawing.Point(466, 148);
-            this.pbPokegotchiEgg3.Name = "pbPokegotchiEgg3";
-            this.pbPokegotchiEgg3.Size = new System.Drawing.Size(111, 98);
-            this.pbPokegotchiEgg3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPokegotchiEgg3.TabIndex = 3;
-            this.pbPokegotchiEgg3.TabStop = false;
+            pbPokegotchiEgg3.Cursor = Cursors.Hand;
+            pbPokegotchiEgg3.Image = Properties.Resources.Egg;
+            pbPokegotchiEgg3.Location = new Point(466, 148);
+            pbPokegotchiEgg3.Name = "pbPokegotchiEgg3";
+            pbPokegotchiEgg3.Size = new Size(111, 98);
+            pbPokegotchiEgg3.SizeMode = PictureBoxSizeMode.Zoom;
+            pbPokegotchiEgg3.TabIndex = 3;
+            pbPokegotchiEgg3.TabStop = false;
+            pbPokegotchiEgg3.Click += pbPokegotchiEgg3_Click;
+
             // 
             // lblPokegotchiEgg1
             // 
-            this.lblPokegotchiEgg1.AutoSize = true;
-            this.lblPokegotchiEgg1.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPokegotchiEgg1.Location = new System.Drawing.Point(78, 260);
-            this.lblPokegotchiEgg1.Name = "lblPokegotchiEgg1";
-            this.lblPokegotchiEgg1.Size = new System.Drawing.Size(91, 21);
-            this.lblPokegotchiEgg1.TabIndex = 4;
-            this.lblPokegotchiEgg1.Text = "Platzhalter1";
+            lblPokegotchiEgg1.AutoSize = true;
+            lblPokegotchiEgg1.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPokegotchiEgg1.Location = new Point(78, 260);
+            lblPokegotchiEgg1.Name = "lblPokegotchiEgg1";
+            lblPokegotchiEgg1.Size = new Size(91, 21);
+            lblPokegotchiEgg1.TabIndex = 4;
+            lblPokegotchiEgg1.Text = "Platzhalter1";
             // 
             // lblPokegotchiEgg2
             // 
-            this.lblPokegotchiEgg2.AutoSize = true;
-            this.lblPokegotchiEgg2.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPokegotchiEgg2.Location = new System.Drawing.Point(276, 260);
-            this.lblPokegotchiEgg2.Name = "lblPokegotchiEgg2";
-            this.lblPokegotchiEgg2.Size = new System.Drawing.Size(91, 21);
-            this.lblPokegotchiEgg2.TabIndex = 5;
-            this.lblPokegotchiEgg2.Text = "Platzhalter2";
+            lblPokegotchiEgg2.AutoSize = true;
+            lblPokegotchiEgg2.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPokegotchiEgg2.Location = new Point(276, 260);
+            lblPokegotchiEgg2.Name = "lblPokegotchiEgg2";
+            lblPokegotchiEgg2.Size = new Size(91, 21);
+            lblPokegotchiEgg2.TabIndex = 5;
+            lblPokegotchiEgg2.Text = "Platzhalter2";
             // 
             // lblPokegotchiEgg3
             // 
-            this.lblPokegotchiEgg3.AutoSize = true;
-            this.lblPokegotchiEgg3.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPokegotchiEgg3.Location = new System.Drawing.Point(477, 260);
-            this.lblPokegotchiEgg3.Name = "lblPokegotchiEgg3";
-            this.lblPokegotchiEgg3.Size = new System.Drawing.Size(91, 21);
-            this.lblPokegotchiEgg3.TabIndex = 6;
-            this.lblPokegotchiEgg3.Text = "Platzhalter3";
+            lblPokegotchiEgg3.AutoSize = true;
+            lblPokegotchiEgg3.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPokegotchiEgg3.Location = new Point(477, 260);
+            lblPokegotchiEgg3.Name = "lblPokegotchiEgg3";
+            lblPokegotchiEgg3.Size = new Size(91, 21);
+            lblPokegotchiEgg3.TabIndex = 6;
+            lblPokegotchiEgg3.Text = "Platzhalter3";
             // 
             // f_NewPokegotchi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(634, 325);
-            this.Controls.Add(this.lblPokegotchiEgg3);
-            this.Controls.Add(this.lblPokegotchiEgg2);
-            this.Controls.Add(this.lblPokegotchiEgg1);
-            this.Controls.Add(this.pbPokegotchiEgg3);
-            this.Controls.Add(this.pbPokegotchiEgg2);
-            this.Controls.Add(this.pbPokegotchiEgg1);
-            this.Controls.Add(this.pnlGetPokegotchi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "f_NewPokegotchi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Get your Pokegotchi";
-            this.pnlGetPokegotchi.ResumeLayout(false);
-            this.pnlGetPokegotchi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPokegotchiEgg3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(634, 325);
+            Controls.Add(lblPokegotchiEgg3);
+            Controls.Add(lblPokegotchiEgg2);
+            Controls.Add(lblPokegotchiEgg1);
+            Controls.Add(pbPokegotchiEgg3);
+            Controls.Add(pbPokegotchiEgg2);
+            Controls.Add(pbPokegotchiEgg1);
+            Controls.Add(pnlGetPokegotchi);
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            Name = "f_NewPokegotchi";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Get your Pokegotchi";
+            pnlGetPokegotchi.ResumeLayout(false);
+            pnlGetPokegotchi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbPokegotchiEgg3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
