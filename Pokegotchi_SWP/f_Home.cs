@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,9 +15,27 @@ namespace Pokegotchi_SWP
     {
         public bool exit = false;
 
+        List<object>HavingPokegotchi = new List<object>();
+
         public f_Home()
         {
             InitializeComponent();
+
+            Pokegotchi what = new Pokegotchi("FDS","Hi","jf",4,4,43,43,43,43,43,43,43);
+
+            if (f_NewPokegotchi.chosenpokegotchi == 1)
+            {
+                pbFavPokegotchi.Image = Properties.Resources.WaterPlop_Wasser;
+                HavingPokegotchi.Add(what);
+            }
+            else if (f_NewPokegotchi.chosenpokegotchi == 2)
+            {
+                pbFavPokegotchi.Image = Properties.Resources.Fireboy_Feuer;
+            }
+            else if (f_NewPokegotchi.chosenpokegotchi == 3)
+            {
+                pbFavPokegotchi.Image = Properties.Resources.venti;
+            }
         }
 
         private void btnCare_Click(object sender, EventArgs e)

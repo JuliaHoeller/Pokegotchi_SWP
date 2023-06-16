@@ -16,6 +16,9 @@ namespace Pokegotchi_SWP
         public f_PokegotchiSelection()
         {
             InitializeComponent();
+
+
+            cblSelectPokegotchi.Items.Add("");
         }
 
         private void btn_Back_Click(object sender, EventArgs e)

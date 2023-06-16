@@ -93,6 +93,16 @@ namespace Pokegotchi_SWP.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fireboy_Feuer1 {
+            get {
+                object obj = ResourceManager.GetObject("Fireboy_Feuer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Livingroom {
             get {
                 object obj = ResourceManager.GetObject("Livingroom", resourceCulture);
@@ -103,9 +113,29 @@ namespace Pokegotchi_SWP.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TwoSwords {
+            get {
+                object obj = ResourceManager.GetObject("TwoSwords", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap venti {
             get {
                 object obj = ResourceManager.GetObject("venti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WaterPlop_Wasser {
+            get {
+                object obj = ResourceManager.GetObject("WaterPlop_Wasser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
