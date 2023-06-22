@@ -49,6 +49,7 @@ namespace Pokegotchi_SWP
 
             this.Hide();
             fight.ShowDialog();
+            this.Show();
         }
     }
 }
