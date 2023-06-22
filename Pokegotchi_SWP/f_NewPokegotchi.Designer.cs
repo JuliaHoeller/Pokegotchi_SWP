@@ -65,7 +65,7 @@
             lblHeadingGetPokegotchi.Text = "Wähle dein Pokegotchi-Ei:";
             // 
             // pbPokegotchiEgg1
-            //
+            // 
             pbPokegotchiEgg1.Cursor = Cursors.Hand;
             pbPokegotchiEgg1.Image = Properties.Resources.Egg;
             pbPokegotchiEgg1.Location = new Point(67, 148);
@@ -99,7 +99,6 @@
             pbPokegotchiEgg3.TabIndex = 3;
             pbPokegotchiEgg3.TabStop = false;
             pbPokegotchiEgg3.Click += pbPokegotchiEgg3_Click;
-
             // 
             // lblPokegotchiEgg1
             // 
@@ -107,9 +106,9 @@
             lblPokegotchiEgg1.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPokegotchiEgg1.Location = new Point(78, 260);
             lblPokegotchiEgg1.Name = "lblPokegotchiEgg1";
-            lblPokegotchiEgg1.Size = new Size(91, 21);
+            lblPokegotchiEgg1.Size = new Size(88, 21);
             lblPokegotchiEgg1.TabIndex = 4;
-            lblPokegotchiEgg1.Text = "Platzhalter1";
+            lblPokegotchiEgg1.Text = "Wasserplop";
             // 
             // lblPokegotchiEgg2
             // 
@@ -117,9 +116,9 @@
             lblPokegotchiEgg2.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPokegotchiEgg2.Location = new Point(276, 260);
             lblPokegotchiEgg2.Name = "lblPokegotchiEgg2";
-            lblPokegotchiEgg2.Size = new Size(91, 21);
+            lblPokegotchiEgg2.Size = new Size(59, 21);
             lblPokegotchiEgg2.TabIndex = 5;
-            lblPokegotchiEgg2.Text = "Platzhalter2";
+            lblPokegotchiEgg2.Text = "Fireboy";
             // 
             // lblPokegotchiEgg3
             // 
@@ -127,9 +126,9 @@
             lblPokegotchiEgg3.Font = new Font("Franklin Gothic Book", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPokegotchiEgg3.Location = new Point(477, 260);
             lblPokegotchiEgg3.Name = "lblPokegotchiEgg3";
-            lblPokegotchiEgg3.Size = new Size(91, 21);
+            lblPokegotchiEgg3.Size = new Size(118, 21);
             lblPokegotchiEgg3.TabIndex = 6;
-            lblPokegotchiEgg3.Text = "Platzhalter3";
+            lblPokegotchiEgg3.Text = "NotExistingErde";
             // 
             // f_NewPokegotchi
             // 

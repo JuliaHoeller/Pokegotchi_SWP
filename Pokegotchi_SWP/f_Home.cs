@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -13,13 +14,42 @@ namespace Pokegotchi_SWP
     public partial class f_Home : Form
     {
         public bool exit = false;
+        public static string pokegotchiName; //for other forms to search the right pokegotchi
+
+        public static List<object>ListPokegotchi = new List<object>(); //creating list to safe all pokegotchi needed (which the user has)
+
+        Pokegotchi Fireboy = new Pokegotchi("Fire", "Fireboy", "Feuer", 1, 1, 1, 50, 60, 30, 40, 30, 3); //creating new objects of starter pokegotchi
+        Pokegotchi Wasser = new Pokegotchi("Water", "Wasser", "Wasser", 1, 1, 1, 70, 20, 50, 20, 50, 4);
+        Pokegotchi VentiStone = new Pokegotchi("Platzhalter", "Vent", "Luft", 100, 100, 100, 100, 100, 100, 100, 100, 100);
 
         public f_Home()
         {
             InitializeComponent();
+
+            if (f_NewPokegotchi.chosenpokegotchi == 1)//show the matching picture to the chosen pokegotchi
+            {
+                pbFavPokegotchi.Image = Properties.Resources.WaterPlop_Wasser;
+                ListPokegotchi.Add(Wasser);
+
+                pokegotchiName = Wasser.name;
+            }
+            else if (f_NewPokegotchi.chosenpokegotchi == 2)
+            {
+                pbFavPokegotchi.Image = Properties.Resources.Fireboy_Feuer;
+                ListPokegotchi.Add(Fireboy);
+
+                pokegotchiName = Wasser.name;
+            }
+            else if (f_NewPokegotchi.chosenpokegotchi == 3)
+            {
+                pbFavPokegotchi.Image = Properties.Resources.venti;
+                ListPokegotchi.Add(VentiStone);
+
+                pokegotchiName = VentiStone.name;
+            }
         }
 
-        private void btnCare_Click(object sender, EventArgs e)
+        private void btnCare_Click(object sender, EventArgs e) //go to diffrent forms
         {
             f_Care care = new f_Care();
             this.Hide();

@@ -118,22 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="venti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\venti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bedroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bedroom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Livingroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Livingroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fireboy_Feuer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fireboy_Feuer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="venti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\venti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fireboy_Feuer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fireboy_Feuer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Livingroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Livingroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TwoSwords" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwoSwords.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zucht_ICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zucht_ICON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WaterPlop_Wasser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WaterPlop_Wasser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
