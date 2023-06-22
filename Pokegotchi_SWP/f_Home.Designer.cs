@@ -98,7 +98,7 @@
             btn_back.Name = "btn_back";
             btn_back.Size = new Size(117, 37);
             btn_back.TabIndex = 5;
-            btn_back.Text = "zurück";
+            btn_back.Text = "Schließen";
             btn_back.UseVisualStyleBackColor = true;
             btn_back.Click += btn_back_Click;
             // 
