@@ -183,6 +183,7 @@
             this.btnStartFight.TabIndex = 12;
             this.btnStartFight.Text = "Kampf starten";
             this.btnStartFight.UseVisualStyleBackColor = true;
+            this.btnStartFight.Click += new System.EventHandler(this.btnStartFight_Click_1);
             // 
             // cblSelectPokegotchi
             // 

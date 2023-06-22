@@ -25,7 +25,7 @@ namespace Pokegotchi_SWP
         {
             exit = true;
             this.Hide();
-            this.Dispose();
+           this.Dispose();
         }
 
         private void btnStartFight_Click(object sender, EventArgs e)
@@ -41,6 +41,14 @@ namespace Pokegotchi_SWP
             exit = true;
             this.Hide();
             this.Dispose();
+        }
+
+        private void btnStartFight_Click_1(object sender, EventArgs e)
+        {
+            f_Fight fight = new f_Fight();
+
+            this.Hide();
+            fight.ShowDialog();
         }
     }
 }

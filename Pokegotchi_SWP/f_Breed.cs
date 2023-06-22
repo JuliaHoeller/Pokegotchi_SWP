@@ -24,5 +24,12 @@ namespace Pokegotchi_SWP
             this.Hide();
             this.Dispose();
         }
+
+        private void btn_Back_Click_1(object sender, EventArgs e)
+        {
+            exit = true;
+            this.Hide();
+            this.Dispose();
+        }
     }
 }

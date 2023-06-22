@@ -29,7 +29,9 @@ namespace Pokegotchi_SWP
 
         private void btn_back_Click_1(object sender, EventArgs e)
         {
-
+            exit1 = true;
+            this.Hide();
+            this.Dispose();
         }
     }
 }
