@@ -35,5 +35,12 @@ namespace Pokegotchi_SWP
             this.Hide();
             fight.ShowDialog();
         }
+
+        private void btn_Back_Click_1(object sender, EventArgs e)
+        {
+            exit = true;
+            this.Hide();
+            this.Dispose();
+        }
     }
 }

@@ -14,27 +14,38 @@ namespace Pokegotchi_SWP
     public partial class f_Home : Form
     {
         public bool exit = false;
+        public static string pokegotchiName;
 
-        List<object>HavingPokegotchi = new List<object>();
+        public static List<object>ListPokegotchi = new List<object>();
+
+        Pokegotchi Fireboy = new Pokegotchi("Fire", "Fireboy", "Feuer", 1, 1, 1, 50, 60, 30, 40, 30, 3);
+        Pokegotchi Wasser = new Pokegotchi("Water", "Wasser", "Wasser", 1, 1, 1, 70, 20, 50, 20, 50, 4);
+        Pokegotchi VentiStone = new Pokegotchi("Platzhalter", "Vent", "Luft", 100, 100, 100, 100, 100, 100, 100, 100, 100);
 
         public f_Home()
         {
             InitializeComponent();
 
-            Pokegotchi what = new Pokegotchi("FDS","Hi","jf",4,4,43,43,43,43,43,43,43);
-
             if (f_NewPokegotchi.chosenpokegotchi == 1)
             {
                 pbFavPokegotchi.Image = Properties.Resources.WaterPlop_Wasser;
-                HavingPokegotchi.Add(what);
+                ListPokegotchi.Add(Wasser);
+
+                pokegotchiName = Wasser.name;
             }
             else if (f_NewPokegotchi.chosenpokegotchi == 2)
             {
                 pbFavPokegotchi.Image = Properties.Resources.Fireboy_Feuer;
+                ListPokegotchi.Add(Fireboy);
+
+                pokegotchiName = Wasser.name;
             }
             else if (f_NewPokegotchi.chosenpokegotchi == 3)
             {
                 pbFavPokegotchi.Image = Properties.Resources.venti;
+                ListPokegotchi.Add(VentiStone);
+
+                pokegotchiName = VentiStone.name;
             }
         }
 

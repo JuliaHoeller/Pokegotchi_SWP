@@ -26,5 +26,10 @@ namespace Pokegotchi_SWP
             this.Dispose();
 
         }
+
+        private void btn_back_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
