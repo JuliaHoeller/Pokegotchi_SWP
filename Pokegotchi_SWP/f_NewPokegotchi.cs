@@ -12,7 +12,8 @@ namespace Pokegotchi_SWP
 {
     public partial class f_NewPokegotchi : Form
     {
-        public int chosenpokegotchi;
+        public static int chosenpokegotchi;
+
         public f_NewPokegotchi()
         {
             InitializeComponent();
