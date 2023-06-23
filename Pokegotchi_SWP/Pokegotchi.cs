@@ -13,9 +13,15 @@ namespace Pokegotchi_SWP
         //Some of them can be missing or not used, it depends on future devolpment
         private string _race, _name, _typ1;
         private int _level, _EXPhave, _EXPneeded, _Friendship, _HPbase, _ATKbase, _DEFbase, _SATKbase, _SDEFbase, _INITbase, _HP, _ATK, _DEF, _SATK, _SDEF, _INIT;
+        private Image _img;
 
         #region Getter & Setter
 
+        public Image img
+        {
+            get { return _img; }
+            set { _img = value; }
+        }
         public string race
         {
             get { return _race; }
@@ -253,19 +259,41 @@ namespace Pokegotchi_SWP
 
         //Following Methods are Work in Progress, something like LevelUp will need the EXP System which will be done later
         #region Work in Progress
-        private void LevelUP()
+        private List<int> LevelUP()
         {
+            List<int> stats = new List<int>();
             if (EXPhave < EXPneeded)
             {
-                return;
+                return stats;
             }
 
             do
             {
                 EXPhave = EXPhave - EXPneeded;
                 level++;
-                ATK = CalculateStats(ATKbase, level);
+                int newHP = CalculateHP(HPbase, level);
+                int newATK = CalculateStats(ATKbase, level);
+                int newDEF = CalculateStats(DEFbase, level);
+                int newSATK = CalculateStats(SATKbase, level);
+                int newSDEF = CalculateStats(SDEFbase, level);
+                int newINIT = CalculateStats(INITbase, level);
 
+                int diffrenceHP = newHP - HP;
+                int diffrenceATK = newATK - ATK;
+                int diffrenceDEF = newDEF - DEF;
+                int diffrenceSATK = newSATK - SATK;
+                int diffrenceSDEF = newSDEF - SDEF;
+                int diffrenceINIT = newINIT - INIT;
+                 
+                stats.AddRange(new List<int>() { diffrenceHP, diffrenceATK, diffrenceDEF, diffrenceSATK, diffrenceSDEF, diffrenceINIT });
+
+                HP = newHP;
+                ATK = newATK;
+                DEF = newDEF;
+                SATK = newSATK;
+                SDEF = newSDEF;
+                INIT = newINIT;
+                return stats;
             } while (EXPhave > EXPneeded);
         }
         public static double TypeAdvantege(string Attacktype, string Defensetype)
