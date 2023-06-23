@@ -18,14 +18,17 @@ namespace Pokegotchi_SWP
             InitializeComponent();
 
 
-            cblSelectPokegotchi.Items.Add("");
+            foreach (Pokegotchi pokegtochi in f_Home.ListPokegotchi)
+            {
+                cblSelectPokegotchi.Items.Add(pokegtochi.name);
+            }
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
             exit = true;
             this.Hide();
-           this.Dispose();
+            this.Dispose();
         }
 
         private void btnStartFight_Click(object sender, EventArgs e)

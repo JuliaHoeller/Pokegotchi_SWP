@@ -56,7 +56,7 @@ namespace Pokegotchi_SWP
                 }
                 else
                 {
-                    _Friendship = _Friendship + value;
+                    _Friendship = value;
                 }
                 }
         }

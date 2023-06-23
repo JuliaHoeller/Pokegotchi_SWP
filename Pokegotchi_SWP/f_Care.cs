@@ -58,9 +58,9 @@ namespace Pokegotchi_SWP
             {
                 if(pokegotchi.name.Equals(f_Home.pokegotchiName))
                 {
-                    pokegotchi.Friendship += 1; //add frienshiplevel
+                    pokegotchi.Friendship = pokegotchi.Friendship +1; //add frienshiplevel
 
-                    lblFriendshiplevel.Text = "Freundschaftsstufe: " + pokegotchi.Friendship; //display new friendschip level
+                    lblFriendshiplevel.Text = "Freundschaftsstufe: " + pokegotchi.Friendship; //display new friendship level
                 }
 
                 if (count >= 1)

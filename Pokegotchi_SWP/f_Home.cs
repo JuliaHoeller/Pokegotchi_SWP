@@ -38,7 +38,7 @@ namespace Pokegotchi_SWP
                 pbFavPokegotchi.Image = Properties.Resources.Fireboy_Feuer;
                 ListPokegotchi.Add(Fireboy);
 
-                pokegotchiName = Wasser.name;
+                pokegotchiName = Fireboy.name;
             }
             else if (f_NewPokegotchi.chosenpokegotchi == 3)
             {
@@ -58,6 +58,9 @@ namespace Pokegotchi_SWP
             if (care.exit == true)
             {
                 this.Show();
+                care.Dispose();
+                care.Close();
+
             }
 
             else if (care.exit == false)
