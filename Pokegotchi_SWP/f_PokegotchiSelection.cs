@@ -54,5 +54,16 @@ namespace Pokegotchi_SWP
             fight.ShowDialog();
             this.Show();
         }
+
+        private void cblSelectPokegotchi_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            foreach(Pokegotchi pokegotchi in f_Home.ListPokegotchi)
+            {
+                //if()
+                //{
+
+                //}
+            }
+        }
     }
 }

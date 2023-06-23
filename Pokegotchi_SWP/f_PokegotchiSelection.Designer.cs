@@ -188,6 +188,7 @@
             cblSelectPokegotchi.Name = "cblSelectPokegotchi";
             cblSelectPokegotchi.Size = new Size(271, 225);
             cblSelectPokegotchi.TabIndex = 13;
+            cblSelectPokegotchi.ItemCheck += cblSelectPokegotchi_ItemCheck;
             // 
             // btn_Back
             // 

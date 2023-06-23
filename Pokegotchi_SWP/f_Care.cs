@@ -13,7 +13,7 @@ namespace Pokegotchi_SWP
     public partial class f_Care : Form
     {
         public bool exit = false;
-        public int timeLeft = 6 * 60 * 60;
+        public int timeLeft = 1 * 60 * 60;
 
         int count = 0;
 
